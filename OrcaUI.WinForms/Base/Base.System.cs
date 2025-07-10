@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -50,5 +51,21 @@ namespace OrcaUI.WinForms.Base
         public void ReSetBounds(int x, int y, int w, int h) =>
             (Left, Top, Right, Bottom) = (x, y, x + w, y + h);
     }
+
+
+    [StructLayout(LayoutKind.Sequential)]
+    public struct POINT
+    {
+        public int X, Y;
+
+        public POINT(int x, int y) => (X, Y) = (x, y);
+
+        public void Offset(int x, int y)
+        {
+            X += x;
+            Y += y;
+        }
+    }
+
 
 }
