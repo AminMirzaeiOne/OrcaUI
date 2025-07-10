@@ -74,6 +74,12 @@ namespace OrcaUI.WinForms.Base
         public SIZE(int x, int y) => (cx, cy) = (x, y);
     }
 
+    public struct FILETIME
+    {
+        public int dwLowDateTime;
+        public int dwHighDateTime;
+    }
+
 
 
 }
