@@ -110,4 +110,32 @@ namespace OrcaUI.WinForms.Base
         public WINDOWPOS lppos;
     }
 
+    public class Dwm
+    {
+        [DllImport("dwmapi.dll")]
+        public static extern int DwmExtendFrameIntoClientArea(IntPtr hWnd, ref MARGINS pMarInset);
+
+        [DllImport("dwmapi.dll")]
+        public static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
+
+        [DllImport("dwmapi.dll")]
+        public static extern int DwmIsCompositionEnabled(ref int pfEnabled);
+
+        public struct MARGINS
+        {
+            public int leftWidth;
+            public int rightWidth;
+            public int topHeight;
+            public int bottomHeight;
+
+            public MARGINS(int left, int right, int top, int bottom)
+            {
+                leftWidth = left;
+                rightWidth = right;
+                topHeight = top;
+                bottomHeight = bottom;
+            }
+        }
+    }
+
 }
