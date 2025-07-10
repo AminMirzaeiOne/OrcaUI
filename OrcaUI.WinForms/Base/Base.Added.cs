@@ -221,4 +221,20 @@ namespace OrcaUI.WinForms.Base
         public static extern bool CopyFile(string lpExistingFileName, string lpNewFileName, bool bFailIfExists);
     }
 
+    internal class NatualOrderingComparer : IComparer<string>
+    {
+        private const int SORT_DIGITSASNUMBERS = 0x00000008;
+        private const string LOCALE_NAME_INVARIANT = "";
+        private readonly string _locale;
+
+        public NatualOrderingComparer() : this(CultureInfo.CurrentCulture) { }
+
+        public NatualOrderingComparer(CultureInfo cultureInfo) =>
+            _locale = cultureInfo.IsNeutralCulture ? LOCALE_NAME_INVARIANT : cultureInfo.Name;
+
+        public int Compare(string x, string y) =>
+            Kernel.CompareStringEx(_locale, SORT_DIGITSASNUMBERS, x, x.Length, y, y.Length, IntPtr.Zero, IntPtr.Zero, 0) - 2;
+    }
+
+
 }
