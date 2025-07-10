@@ -236,5 +236,13 @@ namespace OrcaUI.WinForms.Base
             Kernel.CompareStringEx(_locale, SORT_DIGITSASNUMBERS, x, x.Length, y, y.Length, IntPtr.Zero, IntPtr.Zero, 0) - 2;
     }
 
+    public partial class WinMM
+    {
+        [DllImport("winmm.dll")]
+        public static extern int timeSetEvent(int uDelay, int uResolution, TimerSetEventCallback fptc, int dwUser, int uFlags);
+
+        public delegate void TimerSetEventCallback(int uTimerID, uint uMsg, uint dwUser, UIntPtr dw1, UIntPtr dw2);
+    }
+
 
 }
