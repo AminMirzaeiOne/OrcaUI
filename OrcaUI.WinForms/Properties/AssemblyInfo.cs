@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("OrcaUI.WinForms")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A modern user interface library modeled after Sunny UI for Windows Forms")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("AminMirzaeiOne")]
 [assembly: AssemblyProduct("OrcaUI.WinForms")]
 [assembly: AssemblyCopyright("Copyright ©  2025")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("AminMirzaeiOne")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
