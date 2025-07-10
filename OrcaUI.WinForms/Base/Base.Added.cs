@@ -68,4 +68,39 @@ namespace OrcaUI.WinForms.Base
         public static extern bool PrintWindow(IntPtr window, IntPtr hdcBlt, uint nFlags);
     }
 
+    public partial class User
+    {
+        [DllImport("user32.dll")]
+        public static extern int SetWindowRgn(IntPtr wnd, int hRgn, bool bRedraw);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern IntPtr SendMessage(IntPtr hWnd, int msg, int wParam, string lParam);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern IntPtr SendMessage(IntPtr hWnd, int msg, IntPtr wParam, IntPtr lParam);
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool MoveWindow(IntPtr hWnd, int x, int y, int nWidth, int nHeight, bool bRepaint = true);
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool PtInRect([In] ref RECT lprc, Point pt);
+
+        [DllImport("user32.dll", EntryPoint = "PostMessage")]
+        public static extern bool PostMessage(IntPtr handle, int msg, uint wParam, uint lParam);
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool ShowScrollBar(IntPtr hWnd, int wBar, bool bShow);
+
+        [DllImport("user32.dll")]
+        public static extern bool SetProcessDPIAware();
+
+        [DllImport("user32.dll", SetLastError = true, ExactSpelling = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool AdjustWindowRectEx(ref RECT lpRect, int dwStyle, [MarshalAs(UnmanagedType.Bool)] bool bMenu, int dwExStyle);
+
+    }
+
 }
