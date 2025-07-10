@@ -138,4 +138,24 @@ namespace OrcaUI.WinForms.Base
         }
     }
 
+    public partial class AdvApi
+    {
+        [DllImport("Advapi32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool OpenProcessToken(IntPtr ProcessHandle, uint DesiredAccesss, out IntPtr TokenHandle);
+
+
+        [DllImport("advapi32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool LookupPrivilegeValue(string lpSystemName, string lpName,
+            [MarshalAs(UnmanagedType.Struct)] ref LUID lpLuid);
+
+        [DllImport("advapi32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool AdjustTokenPrivileges(IntPtr TokenHandle,
+            [MarshalAs(UnmanagedType.Bool)] bool DisableAllPrivileges,
+            [MarshalAs(UnmanagedType.Struct)] ref TOKEN_PRIVILEGES NewState,
+            uint BufferLength, IntPtr PreviousState, uint ReturnLength);
+    }
+
 }
