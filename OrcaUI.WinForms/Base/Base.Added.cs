@@ -103,4 +103,11 @@ namespace OrcaUI.WinForms.Base
 
     }
 
+    [StructLayout(LayoutKind.Sequential)]
+    internal struct NCCALCSIZE_PARAMS
+    {
+        public RECT rgrc0, rgrc1, rgrc2;
+        public WINDOWPOS lppos;
+    }
+
 }
