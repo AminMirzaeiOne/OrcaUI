@@ -50,6 +50,7 @@
     <Content Include="OUILWinForms.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Forms\" />
     <Folder Include="Frames\" />
     <Folder Include="Style\" />
     <Folder Include="SystemBase\" />
