@@ -50,6 +50,7 @@
     <Content Include="OUILWinForms.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Base\" />
     <Folder Include="Charts\" />
     <Folder Include="Common\" />
     <Folder Include="Controls\" />
@@ -57,7 +58,6 @@
     <Folder Include="Forms\" />
     <Folder Include="Frames\" />
     <Folder Include="Style\" />
-    <Folder Include="SystemBase\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
