@@ -59,4 +59,13 @@ namespace OrcaUI.WinForms.Base
         }
     }
 
+    public partial class GDI
+    {
+        [DllImport("gdi32.dll", EntryPoint = "DeleteObject", CharSet = CharSet.Ansi)]
+        public static extern int DeleteObject(int hObject);
+
+        [DllImport("user32.dll")]
+        public static extern bool PrintWindow(IntPtr window, IntPtr hdcBlt, uint nFlags);
+    }
+
 }
