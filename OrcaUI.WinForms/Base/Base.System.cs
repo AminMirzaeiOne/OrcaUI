@@ -67,5 +67,13 @@ namespace OrcaUI.WinForms.Base
         }
     }
 
+    public struct SIZE
+    {
+        public int cx, cy;
+
+        public SIZE(int x, int y) => (cx, cy) = (x, y);
+    }
+
+
 
 }
