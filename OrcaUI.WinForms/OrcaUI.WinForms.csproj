@@ -49,5 +49,8 @@
   <ItemGroup>
     <Content Include="OUILWinForms.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SystemBase\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
