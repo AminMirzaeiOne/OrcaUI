@@ -190,4 +190,35 @@ namespace OrcaUI.WinForms.Base
         Continuous = 0x80000000,
     }
 
+    public partial class Kernel
+    {
+        [DllImport("kernel32")]
+        public static extern ExecutionState SetThreadExecutionState(ExecutionState esFlags);
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
+        public static extern Int32 CompareStringEx(string localeName, int flags, string str1, int count1, string str2,
+                int count2, IntPtr versionInformation, IntPtr reserved, int param);
+
+        [DllImport("kernel32.dll")]
+        public static extern IntPtr OpenThread(int dwDesiredAccess, bool bInheritHandle, IntPtr dwThreadId);
+
+        [DllImport("kernel32")]
+        public static extern bool WritePrivateProfileString(byte[] section, byte[] key, byte[] val, string filePath);
+
+        [DllImport("kernel32")]
+        public static extern int GetPrivateProfileString(byte[] section, byte[] key, byte[] def, byte[] retVal, int size, string filePath);
+
+        //Opens an existing process object and returns the process handle
+        [DllImportAttribute("kernel32.dll", EntryPoint = "OpenProcess")]
+        public static extern IntPtr OpenProcess(int dwDesiredAccess, bool bInheritHandle, int dwProcessId);
+
+        //Read byte set data from the specified memory
+        [DllImport("kernel32.dll", EntryPoint = "ReadProcessMemory")]
+        public static extern bool ReadProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, IntPtr lpBuffer, int nSize, IntPtr lpNumberOfBytesRead);
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool CopyFile(string lpExistingFileName, string lpNewFileName, bool bFailIfExists);
+    }
+
 }
