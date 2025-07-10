@@ -6,7 +6,49 @@ using System.Threading.Tasks;
 
 namespace OrcaUI.WinForms.Base
 {
-    internal class Base
+    public struct RECT
     {
+        public int Left, Top, Right, Bottom;
+
+        public RECT(int left, int top, int right, int bottom) =>
+            (Left, Top, Right, Bottom) = (left, top, right, bottom);
+
+        public RECT(RECT rect) : this(rect.Left, rect.Top, rect.Right, rect.Bottom) { }
+
+        public POINT TopLeft() => new(Left, Top);
+        public POINT BottomRight() => new(Right, Bottom);
+
+        public int Width
+        {
+            get => Right - Left;
+            set => Right = Left + value;
+        }
+
+        public int Height
+        {
+            get => Bottom - Top;
+            set => Bottom = Top + value;
+        }
+
+        public void Offset(int x, int y)
+        {
+            Left += x; Top += y;
+            Right += x; Bottom += y;
+        }
+
+        public void Inflate(int x, int y)
+        {
+            Left -= x; Right += x;
+            Top -= y; Bottom += y;
+        }
+
+        public void SetEmpty() => (Left, Top, Right, Bottom) = (0, 0, 0, 0);
+
+        public void ReSet(RECT rect) =>
+            (Left, Top, Right, Bottom) = (rect.Left, rect.Top, rect.Right, rect.Bottom);
+
+        public void ReSetBounds(int x, int y, int w, int h) =>
+            (Left, Top, Right, Bottom) = (x, y, x + w, y + h);
     }
+
 }
