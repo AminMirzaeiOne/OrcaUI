@@ -389,5 +389,12 @@ namespace OrcaUI.WinForms.Base
         public short caRedGreenTint;
     }
 
+    public struct DOCINFO
+    {
+        public int cbSize;
+        public string lpszDocName;
+        public string lpszOutput;
+    }
+
 
 }
