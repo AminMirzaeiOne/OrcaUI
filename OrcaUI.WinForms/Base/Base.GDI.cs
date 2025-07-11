@@ -33,4 +33,12 @@ namespace OrcaUI.WinForms.Base
         public byte rgbtGreen;
         public byte rgbtRed;
     }
+
+    public struct RGBQUAD
+    {
+        public byte rgbBlue;
+        public byte rgbGreen;
+        public byte rgbRed;
+        public byte rgbReserved;
+    }
 }
