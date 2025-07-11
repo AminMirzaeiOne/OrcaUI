@@ -487,5 +487,14 @@ namespace OrcaUI.WinForms.Base
         public int dwDamageMask;
     }
 
+    [StructLayout(LayoutKind.Sequential)]
+    public struct BLENDFUNCTION
+    {
+        public byte BlendOp;
+        public byte BlendFlags;
+        public byte SourceConstantAlpha;
+        public byte AlphaFormat;
+    }
+
 
 }
