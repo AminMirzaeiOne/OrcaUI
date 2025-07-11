@@ -360,5 +360,18 @@ namespace OrcaUI.WinForms.Base
         public short gmCellIncY;
     }
 
+    public struct POINTFX
+    {
+        public FIXED x;
+        public FIXED y;
+    }
+
+    public struct RASTERIZER_STATUS
+    {
+        public short nSize;
+        public short wFlags;
+        public short nLanguageID;
+    }
+
 
 }
