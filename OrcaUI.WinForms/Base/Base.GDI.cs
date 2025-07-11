@@ -429,5 +429,12 @@ namespace OrcaUI.WinForms.Base
         public int nMaxFit;
     }
 
+    public struct CIEXYZ
+    {
+        public int ciexyzX;
+        public int ciexyzY;
+        public int ciexyzZ;
+    }
+
 
 }
