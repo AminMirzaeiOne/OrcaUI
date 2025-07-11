@@ -26,4 +26,11 @@ namespace OrcaUI.WinForms.Base
         public short bmBitsPixel;
         public int bmBits;
     }
+
+    public struct RGBTRIPLE
+    {
+        public byte rgbtBlue;
+        public byte rgbtGreen;
+        public byte rgbtRed;
+    }
 }
