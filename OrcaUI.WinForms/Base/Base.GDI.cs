@@ -409,5 +409,12 @@ namespace OrcaUI.WinForms.Base
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)] public uint[] fsCsb;
     }
 
+    public struct CHARSETINFO
+    {
+        public int ciCharset;
+        public int ciACP;
+        public FONTSIGNATURE fs;
+    }
+
 
 }
