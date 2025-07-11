@@ -381,4 +381,14 @@ namespace OrcaUI.WinForms.Base
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = Kernel.MAX_LEADBYTES)] public byte[] LeadByte;
     }
 
+    public struct NUMBERFMT
+    {
+        public int NumDigits;
+        public int LeadingZero;
+        public int Grouping;
+        public string lpDecimalSep;
+        public string lpThousandSep;
+        public int NegativeOrder;
+    }
+
 }
