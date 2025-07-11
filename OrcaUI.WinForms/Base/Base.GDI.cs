@@ -194,5 +194,12 @@ namespace OrcaUI.WinForms.Base
         public int lbHatch;
     }
 
+    public struct LOGPEN
+    {
+        public int lopnStyle;
+        public POINT lopnWidth;
+        public uint lopnColor;
+    }
+
 
 }
