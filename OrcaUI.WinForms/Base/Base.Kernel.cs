@@ -449,4 +449,20 @@ namespace OrcaUI.WinForms.Base
         public int Attributes;
     }
 
+    public struct WIN32_FIND_DATA
+    {
+        public int dwFileAttributes;
+        public FILETIME ftCreationTime;
+        public FILETIME ftLastAccessTime;
+        public FILETIME ftLastWriteTime;
+        public int nFileSizeHigh;
+        public int nFileSizeLow;
+        public int dwReserved0;
+        public int dwReserved1;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = Kernel.MAX_PATH)]
+        public string cFileName;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 14)]
+        public string cAlternate;
+    }
+
 }
