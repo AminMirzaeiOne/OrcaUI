@@ -495,4 +495,11 @@ namespace OrcaUI.WinForms.Base
         public SERVICE_STATUS ServiceStatus;
     }
 
+    public struct QUERY_SERVICE_LOCK_STATUS
+    {
+        public int fIsLocked;
+        public string lpLockOwner;
+        public int dwLockDuration;
+    }
+
 }
