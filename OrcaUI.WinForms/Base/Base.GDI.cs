@@ -235,5 +235,23 @@ namespace OrcaUI.WinForms.Base
         public string lfFaceName;
     }
 
+    public struct TT_HHEA
+    {
+        public uint Version;
+        public Int16 Ascender;
+        public Int16 Descender;
+        public Int16 LineGap;
+        public UInt16 advanceWidthMax;
+        public Int16 minLeftSideBearing;
+        public Int16 minRightSideBearing;
+        public Int16 xMaxExtent;
+        public Int16 caretSlopeRise;
+        public Int16 caretSlopeRun;
+        public Int16 caretOffset;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)] public Int16[] reserved;
+        public Int16 metricDataFormat;
+        public UInt16 numberOfHMetrics;
+    }
+
 
 }
