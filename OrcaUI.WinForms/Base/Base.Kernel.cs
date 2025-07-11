@@ -521,4 +521,10 @@ namespace OrcaUI.WinForms.Base
         public int lpServiceProc;
     }
 
+    public struct LARGE_INTEGER
+    {
+        public int lowpart;
+        public int highpart;
+    }
+
 }
