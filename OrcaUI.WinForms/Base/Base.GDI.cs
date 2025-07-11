@@ -306,5 +306,11 @@ namespace OrcaUI.WinForms.Base
         public RECT rcBound;
     }
 
+    public struct RGNDATA
+    {
+        public RGNDATAHEADER rdh;
+        public byte Buffer;
+    }
+
 
 }
