@@ -65,4 +65,10 @@ namespace OrcaUI.WinForms.Base
         public int biClrUsed;
         public int biClrImportant;
     }
+
+    public struct BITMAPINFO
+    {
+        public BITMAPINFOHEADER bmiHeader;
+        public RGBQUAD bmiColors;
+    }
 }
