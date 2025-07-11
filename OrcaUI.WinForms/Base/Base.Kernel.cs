@@ -334,4 +334,11 @@ namespace OrcaUI.WinForms.Base
         public CONTEXT ContextRecord;
     }
 
+    public struct LDT_ENTRY
+    {
+        public short LimitLow;
+        public short BaseLow;
+        public int HighWord;
+    }
+
 }
