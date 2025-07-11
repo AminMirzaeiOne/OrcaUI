@@ -160,4 +160,11 @@ namespace OrcaUI.WinForms.Base
         public ACL Dacl;
     }
 
+    public struct PRIVILEGE_SET
+    {
+        public int PrivilegeCount;
+        public int Control;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 1)] public LUID_AND_ATTRIBUTES[] Privilege;
+    }
+
 }
