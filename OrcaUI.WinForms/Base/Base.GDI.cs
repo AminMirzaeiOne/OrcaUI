@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+using HANDLE = System.IntPtr;
+using HDC = System.IntPtr;
+using HWND = System.IntPtr;
 
 namespace OrcaUI.WinForms.Base
 {
@@ -623,7 +622,6 @@ namespace OrcaUI.WinForms.Base
         [DllImport("gdi32")] public static extern int GetEnhMetaFileDescription(HANDLE hemf, int cchBuffer, string lpszDescription);
         [DllImport("gdi32")] public static extern int GetEnhMetaFileHeader(HANDLE hemf, int cbBuffer, ref ENHMETAHEADER lpemh);
         [DllImport("gdi32")] public static extern int GetEnhMetaFilePaletteEntries(HANDLE hemf, int cEntries, ref PALETTEENTRY lppe);
-        //jt[DllImport("gdi32")] public static extern int GetFontData(HDC hdc, int dwTable, int dwOffset, IntPtr lpvBuffer, int cbData);
         [DllImport("gdi32")] public static extern int GetFontData(HDC hdc, int dwTable, int dwOffset, ref TT_HHEA lpvBuffer, int cbData);
         [DllImport("gdi32")] public static extern int GetFontLanguageInfo(HDC hdc);
         [DllImport("gdi32")] public static extern int GetGlyphOutline(HDC hdc, int uChar, int fuFormat, ref GLYPHMETRICS lpgm, int cbBuffer, IntPtr lpBuffer, ref MAT2 lpmat2);
@@ -643,8 +641,6 @@ namespace OrcaUI.WinForms.Base
         [DllImport("gdi32")] public static extern int GetObjectType(HANDLE hgdiobj);
         [DllImport("gdi32", EntryPoint = "GetOutlineTextMetricsW", SetLastError = true, CharSet = CharSet.Unicode, ExactSpelling = true)]
         public static extern uint GetOutlineTextMetrics(HDC hdc, uint cbData, IntPtr lpotm);
-        //[DllImport("gdi32", EntryPoint = "GetOutlineTextMetricsW", CharSet = CharSet.Unicode, ExactSpelling = true)] 
-        //public static extern int GetOutlineTextMetrics(HDC hdc, int cbData, ref OUTLINETEXTMETRICW lpotm);
         [DllImport("gdi32")] public static extern int GetPaletteEntries(HANDLE hPalette, int wStartIndex, int wNumEntries, ref PALETTEENTRY lpPaletteEntries);
         [DllImport("gdi32")] public static extern int GetPath(HDC hdc, ref POINT lpPoint, Byte lpTypes, int nSize);
         [DllImport("gdi32")] public static extern int GetPixel(HDC hdc, int x, int y);
