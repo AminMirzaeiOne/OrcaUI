@@ -391,4 +391,16 @@ namespace OrcaUI.WinForms.Base
         public int NegativeOrder;
     }
 
+    public struct CURRENCYFMT
+    {
+        public int NumDigits;
+        public int LeadingZero;
+        public int Grouping;
+        public string lpDecimalSep;
+        public string lpThousandSep;
+        public int NegativeOrder;
+        public int PositiveOrder;
+        public string lpCurrencySymbol;
+    }
+
 }
