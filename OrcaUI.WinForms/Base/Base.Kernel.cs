@@ -409,4 +409,12 @@ namespace OrcaUI.WinForms.Base
         public short y;
     }
 
+    public struct SMALL_RECT
+    {
+        public short Left;
+        public short Top;
+        public short Right;
+        public short Bottom;
+    }
+
 }
