@@ -396,5 +396,12 @@ namespace OrcaUI.WinForms.Base
         public string lpszOutput;
     }
 
+    public struct KERNINGPAIR
+    {
+        public short wFirst;
+        public short wSecond;
+        public int iKernAmount;
+    }
+
 
 }
