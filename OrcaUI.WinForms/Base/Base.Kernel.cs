@@ -432,4 +432,10 @@ namespace OrcaUI.WinForms.Base
         public COORD dwMaximumWindowSize;
     }
 
+    public struct CONSOLE_CURSOR_INFO
+    {
+        public int dwSize;
+        public int bVisible;
+    }
+
 }
