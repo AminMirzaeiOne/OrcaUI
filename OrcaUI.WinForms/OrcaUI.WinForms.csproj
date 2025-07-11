@@ -48,6 +48,7 @@
     <Compile Include="Base\Base.ErrorCodes.cs" />
     <Compile Include="Base\Base.GDI.cs" />
     <Compile Include="Base\Base.Kernel.cs" />
+    <Compile Include="Base\Base.Multimedia.cs" />
     <Compile Include="Base\Base.System.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
