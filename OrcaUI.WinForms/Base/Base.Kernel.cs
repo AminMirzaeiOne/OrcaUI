@@ -21,4 +21,14 @@ namespace OrcaUI.WinForms.Base
         public int lpSecurityDescriptor;
         public int bInheritHandle;
     }
+
+    public struct PROCESS_INFORMATION
+    {
+        public HANDLE hProcess;
+        public HANDLE hThread;
+        public int dwProcessId;
+        public int dwThreadId;
+    }
+
+
 }
