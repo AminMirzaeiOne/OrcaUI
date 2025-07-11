@@ -79,5 +79,14 @@ namespace OrcaUI.WinForms.Base
         public short wReserved1;
     }
 
+    public struct COMMTIMEOUTS
+    {
+        public int ReadIntervalTimeout;
+        public int ReadTotalTimeoutMultiplier;
+        public int ReadTotalTimeoutConstant;
+        public int WriteTotalTimeoutMultiplier;
+        public int WriteTotalTimeoutConstant;
+    }
+
 
 }
