@@ -187,5 +187,12 @@ namespace OrcaUI.WinForms.Base
         public int ntmAveWidth;
     }
 
+    public struct LOGBRUSH
+    {
+        public int lbStyle;
+        public uint lbColor;
+        public int lbHatch;
+    }
+
 
 }
