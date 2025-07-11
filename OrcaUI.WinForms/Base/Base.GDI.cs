@@ -41,4 +41,13 @@ namespace OrcaUI.WinForms.Base
         public byte rgbRed;
         public byte rgbReserved;
     }
+
+    public struct BITMAPCOREHEADER
+    {
+        public int bcSize;
+        public short bcWidth;
+        public short bcHeight;
+        public short bcPlanes;
+        public short bcBitCount;
+    }
 }
