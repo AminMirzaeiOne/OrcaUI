@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -85,6 +86,11 @@ namespace OrcaUI.WinForms.Base
         public short bfReserved1;
         public short bfReserved2;
         public int bfOffBits;
+    }
+
+    public struct HANDLETABLE
+    {
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 1)] public int objectHandle;
     }
 
 
