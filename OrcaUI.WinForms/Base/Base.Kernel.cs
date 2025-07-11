@@ -341,4 +341,15 @@ namespace OrcaUI.WinForms.Base
         public int HighWord;
     }
 
+    public struct TIME_ZONE_INFORMATION
+    {
+        public int Bias;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32)] public short[] StandardName;
+        public SYSTEMTIME StandardDate;
+        public int StandardBias;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32)] public short[] DaylightName;
+        public SYSTEMTIME DaylightDate;
+        public int DaylightBias;
+    }
+
 }
