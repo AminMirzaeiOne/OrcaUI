@@ -403,4 +403,10 @@ namespace OrcaUI.WinForms.Base
         public string lpCurrencySymbol;
     }
 
+    public struct COORD
+    {
+        public short x;
+        public short y;
+    }
+
 }
