@@ -312,5 +312,12 @@ namespace OrcaUI.WinForms.Base
         public byte Buffer;
     }
 
+    public struct ABC
+    {
+        public int abcA;
+        public int abcB;
+        public int abcC;
+    }
+
 
 }
