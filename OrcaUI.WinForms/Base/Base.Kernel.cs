@@ -14,4 +14,11 @@ namespace OrcaUI.WinForms.Base
         public int OffsetHigh;
         public HANDLE hEvent;
     }
+
+    public struct SECURITY_ATTRIBUTES
+    {
+        public int nLength;
+        public int lpSecurityDescriptor;
+        public int bInheritHandle;
+    }
 }
