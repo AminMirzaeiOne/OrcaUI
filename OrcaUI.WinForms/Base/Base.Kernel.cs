@@ -53,5 +53,12 @@ namespace OrcaUI.WinForms.Base
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 1)] public short[] wcProvChar;
     }
 
+    public struct COMSTAT
+    {
+        public int fBitFields;
+        public int cbInQue;
+        public int cbOutQue;
+    }
+
 
 }
