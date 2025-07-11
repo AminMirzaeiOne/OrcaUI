@@ -328,4 +328,10 @@ namespace OrcaUI.WinForms.Base
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)] public int[] Fill;
     }
 
+    public struct EXCEPTION_POINTERS
+    {
+        public EXCEPTION_RECORD pExceptionRecord;
+        public CONTEXT ContextRecord;
+    }
+
 }
