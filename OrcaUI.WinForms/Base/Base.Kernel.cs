@@ -443,4 +443,10 @@ namespace OrcaUI.WinForms.Base
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)] public byte[] Value;
     }
 
+    public struct SID_AND_ATTRIBUTES
+    {
+        public int Sid;
+        public int Attributes;
+    }
+
 }
