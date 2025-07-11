@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Base\Base.Added.cs" />
     <Compile Include="Base\Base.ErrorCodes.cs" />
+    <Compile Include="Base\Base.GDI.cs" />
     <Compile Include="Base\Base.System.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
