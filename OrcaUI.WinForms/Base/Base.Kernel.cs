@@ -127,4 +127,10 @@ namespace OrcaUI.WinForms.Base
         public int HighPart;
     }
 
+    public struct LUID_AND_ATTRIBUTES
+    {
+        public LUID pLuid;
+        public int Attributes;
+    }
+
 }
