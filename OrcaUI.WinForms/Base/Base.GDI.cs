@@ -100,5 +100,13 @@ namespace OrcaUI.WinForms.Base
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 1)] public short rdParm;
     }
 
+    public struct METAFILEPICT
+    {
+        public int mm;
+        public int xExt;
+        public int yExt;
+        public HANDLE hMF;
+    }
+
 
 }
