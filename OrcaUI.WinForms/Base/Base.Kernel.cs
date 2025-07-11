@@ -374,4 +374,11 @@ namespace OrcaUI.WinForms.Base
         public HANDLE hStdError;
     }
 
+    public struct CPINFO
+    {
+        public int MaxCharSize;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = Kernel.MAX_DEFAULTCHAR)] public byte[] DefaultChar;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = Kernel.MAX_LEADBYTES)] public byte[] LeadByte;
+    }
+
 }
