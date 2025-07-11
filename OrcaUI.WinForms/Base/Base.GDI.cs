@@ -115,5 +115,24 @@ namespace OrcaUI.WinForms.Base
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 1)] public int dParm;
     }
 
+    public struct ENHMETAHEADER
+    {
+        public int iType;
+        public int nSize;
+        public RECT rclBounds;
+        public RECT rclFrame;
+        public int dSignature;
+        public int nVersion;
+        public int nBytes;
+        public int nRecords;
+        public short nHandles;
+        public short sReserved;
+        public int nDescription;
+        public int offDescription;
+        public int nPalEntries;
+        public SIZE szlDevice;
+        public SIZE szlMillimeters;
+    }
+
 
 }
