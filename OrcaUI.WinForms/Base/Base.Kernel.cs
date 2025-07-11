@@ -167,4 +167,14 @@ namespace OrcaUI.WinForms.Base
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 1)] public LUID_AND_ATTRIBUTES[] Privilege;
     }
 
+    public struct EXCEPTION_RECORD
+    {
+        public int ExceptionCode;
+        public int ExceptionFlags;
+        public int pExceptionRecord;
+        public int ExceptionAddress;
+        public int NumberParameters;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 15)] public int[] ExceptionInformation;
+    }
+
 }
