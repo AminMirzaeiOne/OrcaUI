@@ -443,5 +443,19 @@ namespace OrcaUI.WinForms.Base
         public CIEXYZ ciexyBlue;
     }
 
+    public struct LOGCOLORSPACE
+    {
+        public int lcsSignature;
+        public int lcsVersion;
+        public int lcsSize;
+        public int lcsCSType;
+        public int lcsIntent;
+        public CIEXYZTRIPLE lcsEndPoints;
+        public int lcsGammaRed;
+        public int lcsGammaGreen;
+        public int lcsGammaBlue;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = Kernel.MAX_PATH)] public string lcsFileName;
+    }
+
 
 }
