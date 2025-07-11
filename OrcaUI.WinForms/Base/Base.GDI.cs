@@ -319,5 +319,12 @@ namespace OrcaUI.WinForms.Base
         public int abcC;
     }
 
+    public struct ABCFLOAT
+    {
+        public double abcfA;
+        public double abcfB;
+        public double abcfC;
+    }
+
 
 }
