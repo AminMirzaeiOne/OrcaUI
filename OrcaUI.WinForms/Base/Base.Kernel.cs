@@ -438,4 +438,9 @@ namespace OrcaUI.WinForms.Base
         public int bVisible;
     }
 
+    public struct SID_IDENTIFIER_AUTHORITY
+    {
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)] public byte[] Value;
+    }
+
 }
