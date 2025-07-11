@@ -93,5 +93,12 @@ namespace OrcaUI.WinForms.Base
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 1)] public int objectHandle;
     }
 
+    public struct METARECORD
+    {
+        public int rdSize;
+        public short rdFunction;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 1)] public short rdParm;
+    }
+
 
 }
