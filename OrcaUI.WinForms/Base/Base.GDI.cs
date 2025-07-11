@@ -403,5 +403,11 @@ namespace OrcaUI.WinForms.Base
         public int iKernAmount;
     }
 
+    public struct FONTSIGNATURE
+    {
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)] public uint[] fsUsb;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)] public uint[] fsCsb;
+    }
+
 
 }
