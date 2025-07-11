@@ -436,5 +436,12 @@ namespace OrcaUI.WinForms.Base
         public int ciexyzZ;
     }
 
+    public struct CIEXYZTRIPLE
+    {
+        public CIEXYZ ciexyzRed;
+        public CIEXYZ ciexyzGreen;
+        public CIEXYZ ciexyBlue;
+    }
+
 
 }
