@@ -337,5 +337,11 @@ namespace OrcaUI.WinForms.Base
         public int pdx;
     }
 
+    public struct FIXED
+    {
+        public short fract;
+        public short Value;
+    }
+
 
 }
