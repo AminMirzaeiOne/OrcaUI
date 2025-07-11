@@ -121,4 +121,10 @@ namespace OrcaUI.WinForms.Base
         public int GenericAll;
     }
 
+    public struct LUID
+    {
+        public int LowPart;
+        public int HighPart;
+    }
+
 }
