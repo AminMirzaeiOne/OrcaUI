@@ -142,4 +142,11 @@ namespace OrcaUI.WinForms.Base
         public short Sbz2;
     }
 
+    public struct ACE_HEADER
+    {
+        public byte AceType;
+        public byte AceFlags;
+        public int AceSize;
+    }
+
 }
