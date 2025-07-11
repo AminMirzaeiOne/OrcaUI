@@ -515,4 +515,10 @@ namespace OrcaUI.WinForms.Base
         public string lpDisplayName;
     }
 
+    public struct SERVICE_TABLE_ENTRY
+    {
+        public string lpServiceName;
+        public int lpServiceProc;
+    }
+
 }
