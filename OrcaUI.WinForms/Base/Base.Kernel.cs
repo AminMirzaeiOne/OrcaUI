@@ -417,4 +417,10 @@ namespace OrcaUI.WinForms.Base
         public short Bottom;
     }
 
+    public struct CHAR_INFO
+    {
+        public short Char;
+        public short Attributes;
+    }
+
 }
