@@ -186,5 +186,11 @@ namespace OrcaUI.WinForms.Base
         public int dwSupport;
     }
 
+    public struct TIMECAPS
+    {
+        public int wPeriodMin;
+        public int wPeriodMax;
+    }
+
 
 }
