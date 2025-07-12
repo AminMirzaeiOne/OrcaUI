@@ -144,4 +144,17 @@ namespace OrcaUI.WinForms.Base
         public short nBlockAlign;
     }
 
+    public struct MIDIOUTCAPS
+    {
+        public short wMid;
+        public short wPid;
+        public int vDriverVersion;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = WinMM.MAXPNAMELEN)] public string szPname;
+        public short wTechnology;
+        public short wVoices;
+        public short wNotes;
+        public short wChannelMask;
+        public int dwSupport;
+    }
+
 }
