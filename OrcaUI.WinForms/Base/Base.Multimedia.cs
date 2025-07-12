@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace OrcaUI.WinForms.Base
 {
-    internal class Base
+    public struct MMTIME
     {
+        public int wType;
+        public int u;
     }
 }
