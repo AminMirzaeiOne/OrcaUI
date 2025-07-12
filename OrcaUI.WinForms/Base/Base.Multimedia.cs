@@ -113,4 +113,15 @@ namespace OrcaUI.WinForms.Base
         public int lpNext;
         public int Reserved;
     }
+
+    public struct WAVEOUTCAPS
+    {
+        public short wMid;
+        public short wPid;
+        public int vDriverVersion;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = WinMM.MAXPNAMELEN)] public string szPname;
+        public int dwFormats;
+        public short wChannels;
+        public int dwSupport;
+    }
 }
