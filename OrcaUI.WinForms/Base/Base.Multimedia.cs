@@ -51,4 +51,17 @@ namespace OrcaUI.WinForms.Base
         public string szName;
         public TARGET tTarget;
     }
+
+    public struct MIXERCONTROL
+    {
+        public int cbStruct;
+        public int dwControlID;
+        public int dwControlType;
+        public int fdwControl;
+        public int cMultipleItems;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = WinMM.MIXER_SHORT_NAME_CHARS)] public string szShortName;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = WinMM.MIXER_LONG_NAME_CHARS)] public string szName;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)] public int[] Bounds;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)] public int[] Metrics;
+    }
 }
