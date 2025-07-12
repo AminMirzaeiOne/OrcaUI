@@ -22,4 +22,14 @@ namespace OrcaUI.WinForms.Base
         public int fdwSupport;
         public int cDestinations;
     }
+
+    public struct TARGET
+    {
+        public int dwType;
+        public int dwDeviceID;
+        public short wMid;
+        public short wPid;
+        public int vDriverVersion;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = WinMM.MAXPNAMELEN)] public string szPname;
+    }
 }
