@@ -157,4 +157,12 @@ namespace OrcaUI.WinForms.Base
         public int dwSupport;
     }
 
+    public struct MIDIINCAPS
+    {
+        public short wMid;
+        public short wPid;
+        public int vDriverVersion;
+        public string szPname;
+    }
+
 }
