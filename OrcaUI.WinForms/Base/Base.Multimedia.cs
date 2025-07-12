@@ -64,4 +64,14 @@ namespace OrcaUI.WinForms.Base
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)] public int[] Bounds;
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)] public int[] Metrics;
     }
+
+    public struct MIXERLINECONTROLS
+    {
+        public int cbStruct;
+        public int dwLineID;
+        public int dwControl;
+        public int cControls;
+        public int cbmxctrl;
+        public MIXERCONTROL pamxctrl;
+    }
 }
