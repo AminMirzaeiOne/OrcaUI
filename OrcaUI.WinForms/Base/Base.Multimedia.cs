@@ -32,4 +32,23 @@ namespace OrcaUI.WinForms.Base
         public int vDriverVersion;
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = WinMM.MAXPNAMELEN)] public string szPname;
     }
+
+    public struct MIXERLINE
+    {
+        public int cbStruct;
+        public int dwDestination;
+        public int dwSource;
+        public int dwLineID;
+        public int fdwLine;
+        public int dwUser;
+        public int dwComponentType;
+        public int cChannels;
+        public int cConnections;
+        public int cControls;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = WinMM.MIXER_SHORT_NAME_CHARS)]
+        public string szShortName;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = WinMM.MIXER_LONG_NAME_CHARS)]
+        public string szName;
+        public TARGET tTarget;
+    }
 }
