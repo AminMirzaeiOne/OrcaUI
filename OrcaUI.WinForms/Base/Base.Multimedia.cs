@@ -246,7 +246,7 @@ namespace OrcaUI.WinForms.Base
     }
 
 
-    public class WinMM
+    public partial class WinMM
     {
         public const int AUXCAPS_AUXIN = 2;
         public const int AUXCAPS_CDAUDIO = 1;
