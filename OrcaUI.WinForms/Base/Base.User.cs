@@ -52,6 +52,22 @@ namespace OrcaUI.WinForms.Base
         public byte[] rgbReserved;
     }
 
+    public struct CREATESTRUCT
+    {
+        public int lpCreateParams;
+        public HANDLE hInstance;
+        public HANDLE hMenu;
+        public HWND hwndParent;
+        public int cy;
+        public int cx;
+        public int y;
+        public int x;
+        public int style;
+        public string lpszName;
+        public string lpszClass;
+        public int ExStyle;
+    }
+
 
 
 }
