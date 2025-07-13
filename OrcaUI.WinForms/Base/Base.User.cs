@@ -78,5 +78,15 @@ namespace OrcaUI.WinForms.Base
         public RECT rcNormalPosition;
     }
 
+    public struct MSG
+    {
+        public HWND hwnd;
+        public int message;
+        public int wParam;
+        public int lParam;
+        public int time;
+        public POINT pt;
+    }
+
 
 }
