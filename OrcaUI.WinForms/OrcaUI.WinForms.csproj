@@ -49,6 +49,7 @@
     <Compile Include="Base\Base.GDI.cs" />
     <Compile Include="Base\Base.Kernel.cs" />
     <Compile Include="Base\Base.Multimedia.cs" />
+    <Compile Include="Base\Base.NetApi.cs" />
     <Compile Include="Base\Base.System.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
