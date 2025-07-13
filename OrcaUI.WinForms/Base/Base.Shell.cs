@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace OrcaUI.WinForms.Base
 {
-    internal class Base
+    public struct DRAGINFO
     {
+        public int uSize;
+        public POINT pt;
+        public int fNC;
+        public string lpFileList;
+        public int grfKeyState;
     }
 }
