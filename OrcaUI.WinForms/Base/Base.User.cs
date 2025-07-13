@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace OrcaUI.WinForms.Base
 {
-    internal class Base
+    public struct CBTACTIVATESTRUCT
     {
+        public int fMouse;
+        public HWND hwndActive;
     }
 }
