@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -35,6 +36,17 @@ namespace OrcaUI.WinForms.Base
         public int fAnyOperationsAborted;
         public HANDLE hNameMappings;
         public string lpszProgressTitle;
+    }
+
+    public struct NOTIFYICONDATA
+    {
+        public int cbSize;
+        public HWND hwnd;
+        public int uID;
+        public int uFlags;
+        public int uCallbackMessage;
+        public HANDLE hIcon;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 64)] public string szTip;
     }
 
 
