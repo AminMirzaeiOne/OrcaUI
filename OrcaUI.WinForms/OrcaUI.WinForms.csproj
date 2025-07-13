@@ -52,6 +52,7 @@
     <Compile Include="Base\Base.NetApi.cs" />
     <Compile Include="Base\Base.Shell.cs" />
     <Compile Include="Base\Base.System.cs" />
+    <Compile Include="Base\Base.User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
