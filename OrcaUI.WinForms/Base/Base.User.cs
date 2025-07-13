@@ -156,5 +156,14 @@ namespace OrcaUI.WinForms.Base
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)] public int Data;
     }
 
+    public struct DRAWTEXTPARAMS
+    {
+        public int cbSize;
+        public int iTabLength;
+        public int iLeftMargin;
+        public int iRightMargin;
+        public int uiLengthDrawn;
+    }
+
 
 }
