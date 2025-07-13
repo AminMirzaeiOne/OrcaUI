@@ -99,5 +99,14 @@ namespace OrcaUI.WinForms.Base
         public short cy;
     }
 
+    public struct ICONINFO
+    {
+        public int fIcon;
+        public int xHotspot;
+        public int yHotspot;
+        public HANDLE hbmMask;
+        public HANDLE hbmColor;
+    }
+
 
 }
