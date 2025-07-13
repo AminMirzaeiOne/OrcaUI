@@ -180,5 +180,17 @@ namespace OrcaUI.WinForms.Base
         public int cch;
     }
 
+    public struct SCROLLINFO
+    {
+        public int cbSize;    // The size in bytes of the SCROLLINFO structure itself
+        public int fMask;     // fMask indicates which data to set or retrieve, e.g., SIF_ALL (all data members are valid), SIF_PAGE (nPage is valid), SIF_POS (nPos is valid), SIF_RANGE (nMin and nMax are valid), SIF_TRACKPOS (nTrackPos is valid)
+        public int nMin;      // Minimum scroll position
+        public int nMax;      // Maximum scroll position
+        public int nPage;     // Page size
+        public int nPos;      // Position of the scroll box (thumb)
+        public int nTrackPos; // Current position of the scroll box while being dragged; cannot be set using SetScrollInfo
+
+        public int ScrollMax => (nMax + 1 - nPage);
+    }
 
 }
