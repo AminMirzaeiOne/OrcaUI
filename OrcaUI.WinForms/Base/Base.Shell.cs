@@ -49,5 +49,14 @@ namespace OrcaUI.WinForms.Base
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 64)] public string szTip;
     }
 
+    public struct SHFILEINFO
+    {
+        public HANDLE hIcon;
+        public int iIcon;
+        public int dwAttributes;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = Kernel.MAX_PATH)] public string szDisplayName;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 80)] public string szTypeName;
+    }
+
 
 }
