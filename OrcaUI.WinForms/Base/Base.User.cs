@@ -21,5 +21,17 @@ namespace OrcaUI.WinForms.Base
         public HWND hwnd;
     }
 
+    public struct WINDOWPOS
+    {
+        public HWND hwnd;
+        public HWND hwndInsertAfter;
+        public int x;
+        public int y;
+        public int cx;
+        public int cy;
+        public int flags;
+    }
+
+
 
 }
