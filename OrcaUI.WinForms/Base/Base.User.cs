@@ -128,5 +128,25 @@ namespace OrcaUI.WinForms.Base
         public SECURITY_QUALITY_OF_SERVICE qos;
     }
 
+    public struct CONVINFO
+    {
+        public int cb;
+        public HANDLE hUser;
+        public HANDLE hConvPartner;
+        public HANDLE hszSvcPartner;
+        public HANDLE hszServiceReq;
+        public HANDLE hszTopic;
+        public HANDLE hszItem;
+        public int wFmt;
+        public int wType;
+        public int wStatus;
+        public int wConvst;
+        public int wLastError;
+        public HANDLE hConvList;
+        public CONVCONTEXT ConvCtxt;
+        public HWND hwnd;
+        public HWND hwndPartner;
+    }
+
 
 }
