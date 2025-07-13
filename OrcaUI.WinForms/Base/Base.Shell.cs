@@ -24,4 +24,18 @@ namespace OrcaUI.WinForms.Base
         public RECT rc;
         public int lParam;
     }
+
+    public struct SHFILEOPSTRUCT
+    {
+        public HWND hwnd;
+        public int wFunc;
+        public string pFrom;
+        public string pTo;
+        public short fFlags;
+        public int fAnyOperationsAborted;
+        public HANDLE hNameMappings;
+        public string lpszProgressTitle;
+    }
+
+
 }
