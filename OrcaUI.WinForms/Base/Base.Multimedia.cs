@@ -208,5 +208,13 @@ namespace OrcaUI.WinForms.Base
         public short wPeriodMax;
     }
 
+    public struct JOYINFO
+    {
+        public int wXpos;
+        public int wYpos;
+        public int wZpos;
+        public int wButtons;
+    }
+
 
 }
