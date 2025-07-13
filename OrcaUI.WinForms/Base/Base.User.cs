@@ -32,6 +32,13 @@ namespace OrcaUI.WinForms.Base
         public int flags;
     }
 
+    public struct ACCEL
+    {
+        public byte fVirt;
+        public short key;
+        public short cmd;
+    }
+
 
 
 }
