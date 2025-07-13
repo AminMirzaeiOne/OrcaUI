@@ -165,5 +165,20 @@ namespace OrcaUI.WinForms.Base
         public int uiLengthDrawn;
     }
 
+    public struct MENUITEMINFO
+    {
+        public int cbSize;
+        public int fMask;
+        public int fType;
+        public int fState;
+        public int wID;
+        public HANDLE hSubMenu;
+        public HANDLE hbmpChecked;
+        public HANDLE hbmpUnchecked;
+        public int dwItemData;
+        public string dwTypeData;
+        public int cch;
+    }
+
 
 }
