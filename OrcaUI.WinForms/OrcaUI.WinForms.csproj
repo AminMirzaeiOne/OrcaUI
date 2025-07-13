@@ -61,7 +61,7 @@
   <ItemGroup>
     <Folder Include="Charts\" />
     <Folder Include="Common\" />
-    <Folder Include="Controls\" />
+    <Folder Include="Controls\Buttons\" />
     <Folder Include="Fonts\" />
     <Folder Include="Forms\" />
     <Folder Include="Frames\" />
