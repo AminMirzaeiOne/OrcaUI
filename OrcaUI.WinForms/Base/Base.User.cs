@@ -11,4 +11,15 @@ namespace OrcaUI.WinForms.Base
         public int fMouse;
         public HWND hwndActive;
     }
+
+    public struct EVENTMSG
+    {
+        public int message;
+        public int paramL;
+        public int paramH;
+        public int time;
+        public HWND hwnd;
+    }
+
+
 }
