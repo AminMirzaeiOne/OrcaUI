@@ -14,4 +14,14 @@ namespace OrcaUI.WinForms.Base
         public string lpFileList;
         public int grfKeyState;
     }
+
+    public struct APPBARDATA
+    {
+        public int cbSize;
+        public HWND hwnd;
+        public int uCallbackMessage;
+        public int uEdge;
+        public RECT rc;
+        public int lParam;
+    }
 }
