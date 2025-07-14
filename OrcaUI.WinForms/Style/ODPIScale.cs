@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrcaUI.WinForms.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,21 @@ namespace OrcaUI.WinForms.Style
         private static float dpiScale = -1;
 
         public static float DPIScale => UIStyles.GlobalFont ? SystemDPIScale * 100.0f / UIStyles.GlobalFontScale : SystemDPIScale;
+
+        public static float SystemDPIScale
+        {
+            get
+            {
+                if (dpiScale < 0)
+                {
+                    using Bitmap bmp = new Bitmap(1, 1);
+                    using Graphics g = bmp.Graphics();
+                    dpiScale = g.DpiX / 96.0f;
+                }
+
+                return dpiScale;
+            }
+        }
+
     }
 }
