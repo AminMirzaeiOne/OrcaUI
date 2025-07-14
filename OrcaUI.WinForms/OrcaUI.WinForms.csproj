@@ -73,6 +73,7 @@
     <Folder Include="Fonts\" />
     <Folder Include="Forms\" />
     <Folder Include="Frames\" />
+    <Folder Include="Sounds\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
