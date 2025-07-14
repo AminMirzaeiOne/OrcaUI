@@ -293,6 +293,33 @@ namespace OrcaUI.WinForms.Style
         public static readonly Color White = Color.FromArgb(248, 248, 248);
     }
 
+    /// <summary>
+    /// Border colors
+    /// </summary>
+    public static class UIRectColorColor
+    {
+        /// <summary>
+        /// Primary color
+        /// </summary>
+        public static readonly Color Primary = Color.FromArgb(0xDC, 0xDF, 0xE6);
+
+        /// <summary>
+        /// Regular color
+        /// </summary>
+        public static readonly Color Regular = Color.FromArgb(0xE4, 0xE7, 0xED);
+
+        /// <summary>
+        /// Secondary color
+        /// </summary>
+        public static readonly Color Secondary = Color.FromArgb(0xEB, 0xEE, 0xF5);
+
+        /// <summary>
+        /// Other color
+        /// </summary>
+        public static readonly Color Plain = Color.FromArgb(0xF2, 0xF6, 0xFC);
+    }
+
+
 
 
 
