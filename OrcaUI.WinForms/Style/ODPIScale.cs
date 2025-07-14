@@ -81,6 +81,31 @@ namespace OrcaUI.WinForms.Style
             return list;
         }
 
+        internal static List<Control> GetAllZoomScaleControls(this Control control)
+        {
+            var list = new List<Control>();
+            foreach (Control con in control.Controls)
+            {
+                if (con is IZoomScale)
+                    list.Add(con);
+
+                if (con is UITextBox) continue;
+                if (con is UIDropControl) continue;
+                if (con is UIListBox) continue;
+                if (con is UIImageListBox) continue;
+                if (con is UIPagination) continue;
+                if (con is UIRichTextBox) continue;
+                if (con is UITreeView) continue;
+
+                if (con.Controls.Count > 0)
+                {
+                    list.AddRange(GetAllZoomScaleControls(con));
+                }
+            }
+
+            return list;
+        }
+
 
     }
 }
