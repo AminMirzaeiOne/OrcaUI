@@ -52,6 +52,12 @@ namespace OrcaUI.WinForms.Style
             }
         }
 
+        internal static void SetDPIScaleFont<T>(this T control, float fontSize) where T : Control, IStyleInterface
+        {
+            if (!UIDPIScale.NeedSetDPIFont()) return;
+            control.Font = DPIScaleFont(control.Font, fontSize);
+        }
+
 
     }
 }
