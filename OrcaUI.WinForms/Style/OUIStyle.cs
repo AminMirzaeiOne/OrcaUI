@@ -319,6 +319,28 @@ namespace OrcaUI.WinForms.Style
         public static readonly Color Plain = Color.FromArgb(0xF2, 0xF6, 0xFC);
     }
 
+    /// <summary>
+    /// Background colors
+    /// </summary>
+    public static class UIBackgroundColor
+    {
+        /// <summary>
+        /// White
+        /// </summary>
+        public static readonly Color White = UIColor.White;
+
+        /// <summary>
+        /// Black
+        /// </summary>
+        public static readonly Color Black = UIColor.Black;
+
+        /// <summary>
+        /// Transparent color
+        /// </summary>
+        public static readonly Color Transparent = Color.Transparent;
+    }
+
+
 
 
 
