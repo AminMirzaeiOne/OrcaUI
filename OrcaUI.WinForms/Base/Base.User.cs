@@ -260,5 +260,11 @@ namespace OrcaUI.WinForms.Base
         }
     }
 
+    public struct TPMPARAMS
+    {
+        public int cbSize;
+        public RECT rcExclude;
+    }
+
 
 }
