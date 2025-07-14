@@ -2,10 +2,6 @@
 
 namespace OrcaUI.WinForms.Style
 {
-    public class zh_CN_Resources : UIBuiltInResources
-    {
-        public override CultureInfo CultureInfo => CultureInfos.zh_CN;
-    }
 
     public abstract class UIBuiltInResources
     {
