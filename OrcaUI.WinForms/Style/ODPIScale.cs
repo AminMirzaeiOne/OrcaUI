@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OrcaUI.WinForms.Style
 {
-    internal class ODPIScale
+    public static class ODPIScale
     {
+
     }
 }
