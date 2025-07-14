@@ -215,4 +215,8 @@ namespace OrcaUI.WinForms.Base
         public uint dwFlags;
     }
 
+    public delegate int FNHookProc(int nCode, int wParam, IntPtr lParam);
+
+    public delegate int WNDPROC(IntPtr hWnd, int msg, int wParam, int lParam);
+
 }
