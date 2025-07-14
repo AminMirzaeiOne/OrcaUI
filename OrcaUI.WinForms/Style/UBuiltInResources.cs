@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 
 namespace OrcaUI.WinForms.Style
 {
+    public class zh_CN_Resources : UIBuiltInResources
+    {
+        public override CultureInfo CultureInfo => CultureInfos.zh_CN;
+    }
+
     public abstract class UIBuiltInResources
     {
         public abstract CultureInfo CultureInfo { get; }
