@@ -9,7 +9,7 @@ namespace OrcaUI.WinForms.Style
 {
     public class OUIBaseStyle
     {
-        public virtual UIStyle Name { get; protected set; }
+        public virtual OUIThemes Name { get; protected set; }
 
         public virtual Color PrimaryColor { get; protected set; }
         public virtual Color RegularColor { get; protected set; }
@@ -404,4 +404,13 @@ namespace OrcaUI.WinForms.Style
 
         public virtual bool BuiltIn => true;
     }
+
+    public class OUIPurpleStyle : OUIBaseStyle
+    {
+        public OUIPurpleStyle()
+        {
+            base.Init(OUIColor.Purple, OUIThemes.Purple, Color.White, OUIFontColor.Primary);
+        }
+    }
+
 }
