@@ -57,7 +57,7 @@
     <Compile Include="Base\Base.User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Style\OBuiltInResources.cs" />
-    <Compile Include="Style\ODPIScale.cs" />
+    <Compile Include="Style\OUIDPIScale.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="OUILWinForms.ico" />

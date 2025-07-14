@@ -5,7 +5,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace OrcaUI.WinForms.Style
 {
-    public static class ODPIScale
+    public static class OUIDPIScale
     {
         private static float dpiScale = -1;
 
