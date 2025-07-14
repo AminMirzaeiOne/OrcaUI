@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace OrcaUI.WinForms.Style
 {
@@ -53,6 +54,31 @@ namespace OrcaUI.WinForms.Style
         {
             if (!UIDPIScale.NeedSetDPIFont()) return;
             control.Font = DPIScaleFont(control.Font, fontSize);
+        }
+
+        internal static List<IStyleInterface> GetAllDPIScaleControls(this Control control)
+        {
+            var list = new List<IStyleInterface>();
+            foreach (Control ctrl in control.Controls)
+            {
+                if (ctrl is IStyleInterface istyleCtrl) list.Add(istyleCtrl);
+
+                if (ctrl is UITextBox) continue;
+                if (ctrl is UIDropControl) continue;
+                if (ctrl is UIListBox) continue;
+                if (ctrl is UIImageListBox) continue;
+                if (ctrl is UIPagination) continue;
+                if (ctrl is UIRichTextBox) continue;
+                if (ctrl is UITreeView) continue;
+                if (ctrl is UITransfer) continue;
+
+                if (ctrl.Controls.Count > 0)
+                {
+                    list.AddRange(GetAllDPIScaleControls(ctrl));
+                }
+            }
+
+            return list;
         }
 
 
