@@ -246,6 +246,23 @@ namespace OrcaUI.WinForms.Style
         public static readonly Color RegularOrange = Color.FromArgb(247, 234, 210);
     }
 
+    /// <summary>
+    /// Disabled colors
+    /// </summary>
+    public static class OUIDisableColor
+    {
+        /// <summary>
+        /// Fill color
+        /// </summary>
+        public static readonly Color Fill = UIFontColor.Plain;
+
+        /// <summary>
+        /// Font color
+        /// </summary>
+        public static readonly Color Fore = UIFontColor.Regular;
+    }
+
+
 
 
 
