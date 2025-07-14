@@ -262,6 +262,36 @@ namespace OrcaUI.WinForms.Style
         public static readonly Color Fore = UIFontColor.Regular;
     }
 
+    /// <summary>
+    /// Font colors
+    /// </summary>
+    public static class OUIFontColor
+    {
+        /// <summary>
+        /// Primary color
+        /// </summary>
+        public static readonly Color Primary = Color.FromArgb(48, 48, 48);
+
+        /// <summary>
+        /// Regular color
+        /// </summary>
+        public static readonly Color Regular = Color.FromArgb(96, 96, 96);
+
+        /// <summary>
+        /// Secondary color
+        /// </summary>
+        public static readonly Color Secondary = Color.FromArgb(144, 144, 144);
+
+        /// <summary>
+        /// Other color
+        /// </summary>
+        public static readonly Color Plain = Color.Silver;
+
+        /// <summary>
+        /// White
+        /// </summary>
+        public static readonly Color White = Color.FromArgb(248, 248, 248);
+    }
 
 
 
