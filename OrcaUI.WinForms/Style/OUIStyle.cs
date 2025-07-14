@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OrcaUI.WinForms.Style
 {
@@ -338,6 +340,132 @@ namespace OrcaUI.WinForms.Style
         /// Transparent color
         /// </summary>
         public static readonly Color Transparent = Color.Transparent;
+    }
+
+    public static class UIStyleHelper
+    {
+        /// <summary>
+        /// Theme color palette
+        /// </summary>
+        /// <param name="style"></param>
+        /// <returns></returns>
+        public static UIBaseStyle Colors(this OrcaUI.WinForms.Style.OUIThemes style)
+        {
+            return OUIThemes.GetStyleColor(style);
+        }
+
+        public static bool IsCustom(this OUIThemes style)
+        {
+            return style.Equals(OUIThemes.Custom);
+        }
+
+        public static bool IsValid(this OUIThemes style)
+        {
+            return (int)style > 0;
+        }
+
+        public static void SetChildUIStyle(Control ctrl, OUIThemes style)
+        {
+            List<Control> controls = ctrl.GetUIStyleControls("IStyleInterface");
+            foreach (var control in controls)
+            {
+                if (control is IStyleInterface item && item.Style == OUIThemes.Inherited)
+                {
+                    if (item is UIPage uipage && uipage.Parent is TabPage tabpage)
+                    {
+                        TabControl tabControl = tabpage.Parent as TabControl;
+                        if (tabControl.SelectedTab == tabpage)
+                        {
+                            item.SetInheritedStyle(style);
+                        }
+                    }
+                    else
+                    {
+                        item.SetInheritedStyle(style);
+                    }
+                }
+            }
+
+            FieldInfo[] fieldInfo = ctrl.GetType().GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
+            foreach (var info in fieldInfo)
+            {
+                if (info.FieldType.Name == "UIContextMenuStrip")
+                {
+                    UIContextMenuStrip context = (UIContextMenuStrip)info.GetValue(ctrl);
+                    if (context != null && context.Style == UIStyle.Inherited)
+                    {
+                        context.SetInheritedStyle(style);
+                    }
+                }
+            }
+        }
+
+        public static void SetChildCustomStyle(this Control ctrl, UIStyle style)
+        {
+            List<Control> controls = ctrl.GetUIStyleControls("IStyleInterface");
+            foreach (var control in controls)
+            {
+                if (control is IStyleInterface item)
+                {
+                    if (item is UIPage uipage && uipage.Parent is TabPage tabpage)
+                    {
+                        TabControl tabControl = tabpage.Parent as TabControl;
+                        if (tabControl.SelectedTab == tabpage)
+                        {
+                            item.SetStyleColor(style.Colors());
+                            item.Style = UIStyle.Custom;
+                        }
+                    }
+                    else
+                    {
+                        item.SetStyleColor(style.Colors());
+                        item.Style = UIStyle.Custom;
+                    }
+                }
+            }
+
+            FieldInfo[] fieldInfo = ctrl.GetType().GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
+            foreach (var info in fieldInfo)
+            {
+                if (info.FieldType.Name == "UIContextMenuStrip")
+                {
+                    UIContextMenuStrip item = (UIContextMenuStrip)info.GetValue(ctrl);
+                    if (item != null)
+                    {
+                        item.SetStyleColor(style.Colors());
+                        item.Style = UIStyle.Custom;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Finds a list of controls that implement a specific interface
+        /// </summary>
+        /// <param name="ctrl">Container control</param>
+        /// <param name="interfaceName">Interface name</param>
+        /// <returns>List of controls</returns>
+        public static List<Control> GetUIStyleControls(this Control ctrl, string interfaceName)
+        {
+            List<Control> values = new List<Control>();
+
+            foreach (Control obj in ctrl.Controls)
+            {
+                if (obj.GetType().GetInterface(interfaceName) != null)
+                {
+                    values.Add(obj);
+                }
+
+                if (obj is UIPage) continue;
+
+                if (obj.Controls.Count > 0)
+                {
+                    values.AddRange(obj.GetUIStyleControls(interfaceName));
+                }
+            }
+
+            return values;
+        }
     }
 
 
