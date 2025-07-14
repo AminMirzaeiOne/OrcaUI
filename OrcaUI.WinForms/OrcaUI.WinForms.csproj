@@ -61,6 +61,7 @@
     <Compile Include="Style\OUIMenuStyle.cs" />
     <Compile Include="Style\OUIRandomColor.cs" />
     <Compile Include="Style\OUIStyle.cs" />
+    <Compile Include="Style\OUIStyleColor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="OUILWinForms.ico" />
