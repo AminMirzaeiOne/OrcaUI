@@ -219,4 +219,19 @@ namespace OrcaUI.WinForms.Base
 
     public delegate int WNDPROC(IntPtr hWnd, int msg, int wParam, int lParam);
 
+    public class WNDCLASS
+    {
+        public int style = 0;
+        public WNDPROC lpfnWndProc = null;
+        public int cbClsExtra = 0;
+        public int cbWndExtra = 0;
+        public IntPtr hInstance = IntPtr.Zero;
+        public IntPtr hIcon = IntPtr.Zero;
+        public IntPtr hCursor = IntPtr.Zero;
+        public IntPtr hbrBackground = IntPtr.Zero;
+        public string lpszMenuName = null;
+        public string lpszClassName = null;
+    }
+
+
 }
