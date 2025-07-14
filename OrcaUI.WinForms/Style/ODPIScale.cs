@@ -28,5 +28,8 @@ namespace OrcaUI.WinForms.Style
             }
         }
 
+        public static bool NeedSetDPIFont() => UIStyles.DPIScale && (SystemDPIScale > 1 || UIStyles.GlobalFont);
+
+
     }
 }
