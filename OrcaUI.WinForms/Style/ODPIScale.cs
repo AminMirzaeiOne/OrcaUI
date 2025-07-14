@@ -31,5 +31,27 @@ namespace OrcaUI.WinForms.Style
         public static bool NeedSetDPIFont() => UIStyles.DPIScale && (SystemDPIScale > 1 || UIStyles.GlobalFont);
 
 
+        internal static Font DPIScaleFont(this Font font, float fontSize)
+        {
+            if (fontSize <= 0) return font;
+            if (UIStyles.DPIScale)
+            {
+                if (UIStyles.GlobalFont)
+                {
+                    byte gdiCharSet = UIStyles.GetGdiCharSet(UIStyles.GlobalFontName);
+                    return new Font(UIStyles.GlobalFontName, fontSize / DPIScale, font.Style, font.Unit, gdiCharSet);
+                }
+                else
+                {
+                    return new Font(font.FontFamily, fontSize / DPIScale, font.Style, font.Unit, font.GdiCharSet);
+                }
+            }
+            else
+            {
+                return new Font(font.FontFamily, fontSize, font.Style, font.Unit, font.GdiCharSet);
+            }
+        }
+
+
     }
 }
