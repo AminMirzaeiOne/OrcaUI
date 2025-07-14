@@ -266,5 +266,17 @@ namespace OrcaUI.WinForms.Base
         public RECT rcExclude;
     }
 
+    public struct BROWSEINFO
+    {
+        public HWND hwndOwner;
+        public int pIDLRoot;
+        public int pszDisplayName;
+        public int lpszTitle;
+        public int ulFlags;
+        public int lpfnCallback;
+        public int lParam;
+        public int iImage;
+    }
+
 
 }
