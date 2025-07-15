@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrcaUI.Font", "OrcaUI.Font\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrcaUI.Control", "OrcaUI.Control\OrcaUI.Control.csproj", "{8349FCC8-E97C-4902-9FD9-BA863A866C31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrcaUI.Form", "OrcaUI.Form\OrcaUI.Form.csproj", "{75205019-2B4C-4BA1-9CA4-653EE61D6169}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{8349FCC8-E97C-4902-9FD9-BA863A866C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8349FCC8-E97C-4902-9FD9-BA863A866C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8349FCC8-E97C-4902-9FD9-BA863A866C31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75205019-2B4C-4BA1-9CA4-653EE61D6169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75205019-2B4C-4BA1-9CA4-653EE61D6169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75205019-2B4C-4BA1-9CA4-653EE61D6169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75205019-2B4C-4BA1-9CA4-653EE61D6169}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
