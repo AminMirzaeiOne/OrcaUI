@@ -1,15 +1,17 @@
-﻿using System;
+﻿using OrcaUI.WinForms.Style;
+using OrcaUI.WinForms.Theme;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrcaUI.WinForms.Style
+namespace OrcaUI.WinForms.Theme
 {
-    public class OUIBaseStyle
+    public class OUIBaseTheme
     {
-        public virtual OUIThemes Name { get; protected set; }
+        public virtual OUITheme Name { get; protected set; }
 
         public virtual Color PrimaryColor { get; protected set; }
         public virtual Color RegularColor { get; protected set; }
@@ -215,11 +217,11 @@ namespace OrcaUI.WinForms.Style
 
         protected Color ForeColor { get; set; }
 
-        public UIBaseStyle DropDownStyle { get; protected set; }
+        public OUIBaseTheme DropDownTheme { get; protected set; }
 
-        public virtual UIBaseStyle Init(Color color, UIStyle style, Color reverseColor, Color foreColor)
+        public virtual OUIBaseTheme Init(Color color, OUITheme Theme, Color reverseColor, Color foreColor)
         {
-            Name = style;
+            Name = Theme;
 
             FillDisableColor = Color.FromArgb(244, 244, 244);
             RectDisableColor = Color.FromArgb(173, 178, 181);
@@ -253,7 +255,7 @@ namespace OrcaUI.WinForms.Style
             FormForeColor = foreColor;
             FormRectColor = PrimaryColor;
             FormControlBoxFillHoverColor = colors[12];
-            FormControlBoxCloseFillHoverColor = UIColor.Red;
+            FormControlBoxCloseFillHoverColor = OUIColor.Red;
             FormBackColor = PlainColor;
             FormControlBoxForeColor = Color.White;
 
@@ -375,7 +377,7 @@ namespace OrcaUI.WinForms.Style
             TreeViewBackColor = Color.White;
             TreeViewLineColor = foreColor;
 
-            EditorBackColor = UIColor.White;
+            EditorBackColor = OUIColor.White;
 
             NavMenuMenuSelectedColor = PrimaryColor;
 
@@ -388,7 +390,7 @@ namespace OrcaUI.WinForms.Style
 
             RoundProcessForeColor2 = Color.Black;
 
-            DropDownStyle = this;
+            DropDownTheme = this;
 
             return this;
         }
@@ -405,86 +407,86 @@ namespace OrcaUI.WinForms.Style
         public virtual bool BuiltIn => true;
     }
 
-    public class OUIPurpleStyle : OUIBaseStyle
+    public class OUIPurpleTheme : OUIBaseTheme
     {
-        public OUIPurpleStyle()
+        public OUIPurpleTheme()
         {
-            base.Init(OUIColor.Purple, OUIThemes.Purple, Color.White, OUIFontColor.Primary);
+            base.Init(OUIColor.Purple, OUITheme.Purple, Color.White, OUIFontColor.Primary);
         }
     }
 
-    public class OUIColorFulStyle : OUIBaseStyle
+    public class OUIColorFulTheme : OUIBaseTheme
     {
-        public OUIColorFulStyle()
+        public OUIColorFulTheme()
         {
-            base.Init(Color.FromArgb(0, 190, 172), OUIThemes.Colorful, Color.White, OUIFontColor.Primary);
+            base.Init(Color.FromArgb(0, 190, 172), OUITheme.Colorful, Color.White, OUIFontColor.Primary);
         }
 
-        public void Init(Color styleColor, Color foreColor)
+        public void Init(Color ThemeColor, Color foreColor)
         {
-            Init(styleColor, OUIThemes.Colorful, foreColor, OUIFontColor.Primary);
+            Init(ThemeColor, OUITheme.Colorful, foreColor, OUIFontColor.Primary);
         }
 
     }
 
-    public class OUICustomStyle : OUIBlueStyle
+    public class OUICustomTheme : OUIBlueTheme
     {
-        public override OUIThemes Name => OUIThemes.Custom;
+        public override OUITheme Name => OUITheme.Custom;
     }
 
-    public class OUIInheritedStyle : OUIBaseStyle
+    public class OUIInheritedTheme : OUIBaseTheme
     {
-        public OUIInheritedStyle()
+        public OUIInheritedTheme()
         {
-            base.Init(OUIColor.Blue, OUIThemes.Inherited, Color.White, OUIFontColor.Primary);
+            base.Init(OUIColor.Blue, OUITheme.Inherited, Color.White, OUIFontColor.Primary);
         }
     }
 
-    public class OUIBlueStyle : OUIBaseStyle
+    public class OUIBlueTheme : OUIBaseTheme
     {
-        public OUIBlueStyle()
+        public OUIBlueTheme()
         {
-            base.Init(OUIColor.Blue, OUIThemes.Blue, Color.White, OUIFontColor.Primary);
+            base.Init(OUIColor.Blue, OUITheme.Blue, Color.White, OUIFontColor.Primary);
         }
     }
 
-    public class OUIGreenStyle : OUIBaseStyle
+    public class OUIGreenTheme : OUIBaseTheme
     {
-        public OUIGreenStyle()
+        public OUIGreenTheme()
         {
-            base.Init(OUIColor.Green, OUIThemes.Green, Color.White, OUIFontColor.Primary);
+            base.Init(OUIColor.Green, OUITheme.Green, Color.White, OUIFontColor.Primary);
         }
     }
     
-    public class OUIRedStyle : OUIBaseStyle
+    public class OUIRedTheme : OUIBaseTheme
     {
-        public OUIRedStyle()
+        public OUIRedTheme()
         {
-            base.Init(OUIColor.Red, OUIThemes.Red, Color.White, OUIFontColor.Primary);
+            base.Init(OUIColor.Red, OUITheme.Red, Color.White, OUIFontColor.Primary);
         }
     }
 
-    public class OUIOrangeStyle : OUIBaseStyle
+    public class OUIOrangeTheme : OUIBaseTheme
     {
-        public OUIOrangeStyle()
+        public OUIOrangeTheme()
         {
-            base.Init(OUIColor.Orange, OUIThemes.Orange, Color.White, OUIFontColor.Primary);
+            base.Init(OUIColor.Orange, OUITheme.Orange, Color.White, OUIFontColor.Primary);
         }
     }
 
-    public class OUIGrayStyle : OUIBaseStyle
+    public class OUIGrayTheme : OUIBaseTheme
     {
-        public OUIGrayStyle()
+        public OUIGrayTheme()
         {
-            base.Init(OUIColor.Gray, OUIThemes.Gray, Color.White, OUIFontColor.Primary);
+            base.Init(OUIColor.Gray, OUITheme.Gray, Color.White, OUIFontColor.Primary);
         }
     }
 
-    public class OUIDarkBlueStyle : OUIBaseStyle
+    public class OUIDarkBlueTheme : OUIBaseTheme
     {
-        public OUIDarkBlueStyle()
+        public OUIDarkBlueTheme()
         {
-            base.Init(OUIColor.Blue, OUIThemes.DarkBlue, Color.White, OUIFontColor.White);
+            base.Init(OUIColor.Blue, OUITheme.DarkBlue, Color.White, OUIFontColor.White);
 
             PrimaryColor = OUIColor.DarkBlue;
             RectColor = Color.FromArgb(18, 58, 92);
@@ -503,8 +505,8 @@ namespace OrcaUI.WinForms.Style
             FormBackColor = PrimaryColor;
             FormControlBoxForeColor = ForeColor;
 
-            ButtonFillLightColor = UIStyles.Blue.PlainColor;
-            ButtonForeLightColor = UIStyles.Blue.PrimaryColor;
+            ButtonFillLightColor = OUIThemes.Blue.PlainColor;
+            ButtonForeLightColor = OUIThemes.Blue.PrimaryColor;
 
             PageBackColor = PlainColor;
             PageRectColor = PrimaryColor;
@@ -594,17 +596,17 @@ namespace OrcaUI.WinForms.Style
 
             RoundProcessForeColor2 = Color.White;
 
-            DropDownStyle = UIStyles.Blue;
+            DropDownTheme = OUIThemes.Blue;
 
             SplitContainerArrowColor = OUIColor.Blue;
         }
     }
 
-    public class OUIBlackStyle : OUIBaseStyle
+    public class OUIBlackTheme : OUIBaseTheme
     {
-        public UIBlackStyle()
+        public OUIBlackTheme()
         {
-            base.Init(OUIColor.Blue, OUIThemes.Black, Color.White, OUIFontColor.Primary);
+            base.Init(OUIColor.Blue, OUITheme.Black, Color.White, OUIFontColor.Primary);
 
             PrimaryColor = Color.FromArgb(24, 24, 24);
             RectColor = Color.FromArgb(18, 58, 92);
@@ -623,8 +625,8 @@ namespace OrcaUI.WinForms.Style
             FormBackColor = PrimaryColor;
             FormControlBoxForeColor = ForeColor;
 
-            ButtonFillLightColor = UIStyles.Blue.PlainColor;
-            ButtonForeLightColor = UIStyles.Blue.PrimaryColor;
+            ButtonFillLightColor = OIThemes.Blue.PlainColor;
+            ButtonForeLightColor = OIThemes.Blue.PrimaryColor;
 
             PageBackColor = PlainColor;
             PageRectColor = PrimaryColor;
@@ -714,7 +716,7 @@ namespace OrcaUI.WinForms.Style
 
             RoundProcessForeColor2 = Color.White;
 
-            DropDownStyle = UIStyles.Blue;
+            DropDownTheme = OUIThemes.Blue;
 
             SplitContainerArrowColor = OUIColor.Blue;
         }
