@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animation\OUIAnimation.cs" />
     <Compile Include="Base\Base.Added.cs" />
     <Compile Include="Base\Base.ErrorCodes.cs" />
     <Compile Include="Base\Base.GDI.cs" />
@@ -70,7 +71,6 @@
     <Content Include="OUILWinForms.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Animation\" />
     <Folder Include="Charts\" />
     <Folder Include="Common\" />
     <Folder Include="Controls\Buttons\" />
