@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36127.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrcaUI.WinForms", "OrcaUI.WinForms\OrcaUI.WinForms.csproj", "{86220BDF-50AA-4001-82CD-441CADBC0352}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrcaUI.Icons", "OrcaUI.Icons\OrcaUI.Icons.csproj", "{67C356CB-2CA7-41B4-B18E-9B9C81DC7318}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrcaUI.Icon", "OrcaUI.Icons\OrcaUI.Icon.csproj", "{67C356CB-2CA7-41B4-B18E-9B9C81DC7318}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrcaUI.Animation", "OrcaUI.Animation\OrcaUI.Animation.csproj", "{FB1D5F46-8BBC-4E03-A4BB-AF5A2D145DAC}"
 EndProject
