@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace OrcaUI.WinForms.Style
+namespace OrcaUI.WinForms.Theme
 {
 
     public abstract class UIBuiltInResources
