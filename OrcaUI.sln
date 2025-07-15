@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36127.28
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrcaUI.WinForms", "OrcaUI.WinForms\OrcaUI.WinForms.csproj", "{86220BDF-50AA-4001-82CD-441CADBC0352}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrcaUI.Base", "OrcaUI.WinForms\OrcaUI.Base.csproj", "{86220BDF-50AA-4001-82CD-441CADBC0352}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrcaUI.Icon", "OrcaUI.Icons\OrcaUI.Icon.csproj", "{67C356CB-2CA7-41B4-B18E-9B9C81DC7318}"
 EndProject
