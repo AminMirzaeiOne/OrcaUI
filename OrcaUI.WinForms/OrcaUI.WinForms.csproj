@@ -46,10 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animation\OUIAnimation.cs" />
-    <Compile Include="Animation\OUIAnimator.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Base\Base.Added.cs" />
     <Compile Include="Base\Base.ErrorCodes.cs" />
     <Compile Include="Base\Base.GDI.cs" />
