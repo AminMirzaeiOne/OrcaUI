@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 
-namespace OrcaUI.WinForms.Style
+namespace OrcaUI.WinForms.Theme
 {
     /// <summary>
     /// Generates random numbers.

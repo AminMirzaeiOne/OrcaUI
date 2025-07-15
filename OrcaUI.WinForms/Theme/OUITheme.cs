@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OrcaUI.WinForms.Style
+namespace OrcaUI.WinForms.Theme
 {
     public interface IThemeInterface
     {
