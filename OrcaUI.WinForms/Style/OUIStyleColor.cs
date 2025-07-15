@@ -440,4 +440,12 @@ namespace OrcaUI.WinForms.Style
         }
     }
 
+    public class OUIBlueStyle : OUIBaseStyle
+    {
+        public OUIBlueStyle()
+        {
+            base.Init(OUIColor.Blue, OUIThemes.Blue, Color.White, OUIFontColor.Primary);
+        }
+    }
+
 }
