@@ -60,6 +60,7 @@
     <Compile Include="Theme\OUIDPIScale.cs" />
     <Compile Include="Theme\OUIMenuTheme.cs" />
     <Compile Include="Theme\OUIRandomColor.cs" />
+    <Compile Include="Theme\OUITexture.cs" />
     <Compile Include="Theme\OUITheme.cs" />
     <Compile Include="Theme\OUIPalette.cs" />
     <Compile Include="Theme\OUIThemes.cs" />
