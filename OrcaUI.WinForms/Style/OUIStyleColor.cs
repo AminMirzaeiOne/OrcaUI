@@ -413,9 +413,9 @@ namespace OrcaUI.WinForms.Style
         }
     }
 
-    public class OUIColorfulStyle : OUIBaseStyle
+    public class OUIColorFulStyle : OUIBaseStyle
     {
-        public OUIColorfulStyle()
+        public OUIColorFulStyle()
         {
             base.Init(Color.FromArgb(0, 190, 172), OUIThemes.Colorful, Color.White, OUIFontColor.Primary);
         }
@@ -424,6 +424,12 @@ namespace OrcaUI.WinForms.Style
         {
             Init(styleColor, OUIThemes.Colorful, foreColor, OUIFontColor.Primary);
         }
+
+    }
+
+    public class OUICustomStyle : OUIBlueStyle
+    {
+        public override OUIThemes Name => OUIThemes.Custom;
     }
 
 }
