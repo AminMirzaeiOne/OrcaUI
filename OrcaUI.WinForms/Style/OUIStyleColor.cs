@@ -432,4 +432,12 @@ namespace OrcaUI.WinForms.Style
         public override OUIThemes Name => OUIThemes.Custom;
     }
 
+    public class OUIInheritedStyle : OUIBaseStyle
+    {
+        public OUIInheritedStyle()
+        {
+            base.Init(OUIColor.Blue, OUIThemes.Inherited, Color.White, OUIFontColor.Primary);
+        }
+    }
+
 }
