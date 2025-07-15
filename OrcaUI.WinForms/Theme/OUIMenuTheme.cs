@@ -6,12 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrcaUI.WinForms.Style
+namespace OrcaUI.WinForms.Theme
 {
     /// <summary>
     /// Menu theme color
     /// </summary>
-    public enum OUIMenuStyle
+    public enum OUIMenuTheme
     {
         /// <summary>
         /// Custom
@@ -34,7 +34,7 @@ namespace OrcaUI.WinForms.Style
 
     public abstract class OUIMenuColor
     {
-        public abstract UIMenuStyle Style { get; }
+        public abstract OUIMenuTheme Theme { get; }
 
         // Background color of the menu
         public virtual Color BackColor => Color.FromArgb(56, 56, 56);
@@ -62,7 +62,7 @@ namespace OrcaUI.WinForms.Style
 
     public class OUIMenuCustomColor : OUIMenuColor
     {
-        public override OUIMenuStyle Style => OUIMenuStyle.Custom;
+        public override OUIMenuTheme Theme => OUIMenuTheme.Custom;
     }
 
     public class OUIMenuBlackColor : OUIMenuColor

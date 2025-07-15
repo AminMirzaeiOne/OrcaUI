@@ -3,7 +3,7 @@
 namespace OrcaUI.WinForms.Theme
 {
 
-    public abstract class UIBuiltInResources
+    public abstract class OUIBuiltInResources
     {
         public abstract CultureInfo CultureInfo { get; }
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OrcaUI.WinForms.Style
 {
-    public interface IStyleInterface
+    public interface IThemeInterface
     {
-        OUIThemes Theme { get; set; }
+        OUITheme Theme { get; set; }
 
         string Version { get; }
 
@@ -21,7 +21,7 @@ namespace OrcaUI.WinForms.Style
         void SetStyleColor(OUIBaseStyle ouiColor);
 
         //void SetStyle(UIStyle style);
-        void SetInheritedStyle(OUIThemes theme);
+        void SetInheritedStyle(OUITheme theme);
 
         void SetDPIScale();
     }
@@ -29,7 +29,7 @@ namespace OrcaUI.WinForms.Style
     /// <summary>
     /// Theme Style
     /// </summary>
-    public enum OUIThemes
+    public enum OUITheme
     {
         /// <summary>
         /// Inherit from global theme
@@ -354,22 +354,22 @@ namespace OrcaUI.WinForms.Style
             return OUIThemes.GetStyleColor(style);
         }
 
-        public static bool IsCustom(this OUIThemes style)
+        public static bool IsCustom(this OUITheme theme)
         {
-            return style.Equals(OUIThemes.Custom);
+            return theme.Equals(OUITheme.Custom);
         }
 
-        public static bool IsValid(this OUIThemes style)
+        public static bool IsValid(this OUITheme theme)
         {
-            return (int)style > 0;
+            return (int)theme > 0;
         }
 
-        public static void SetChildUIStyle(Control ctrl, OUIThemes style)
+        public static void SetChildUIStyle(Control ctrl, OUITheme style)
         {
             List<Control> controls = ctrl.GetUIStyleControls("IStyleInterface");
             foreach (var control in controls)
             {
-                if (control is IStyleInterface item && item.Theme == OUIThemes.Inherited)
+                if (control is IThemeInterface item && item.Theme == OUITheme.Inherited)
                 {
                     if (item is OUIPage uipage && uipage.Parent is TabPage tabpage)
                     {
@@ -392,7 +392,7 @@ namespace OrcaUI.WinForms.Style
                 if (info.FieldType.Name == "UIContextMenuStrip")
                 {
                     UIContextMenuStrip context = (UIContextMenuStrip)info.GetValue(ctrl);
-                    if (context != null && context.Style == OUIThemes.Inherited)
+                    if (context != null && context.Style == OUITheme.Inherited)
                     {
                         context.SetInheritedStyle(style);
                     }
@@ -400,12 +400,12 @@ namespace OrcaUI.WinForms.Style
             }
         }
 
-        public static void SetChildCustomStyle(this Control ctrl, UIStyle style)
+        public static void SetChildCustomStyle(this Control ctrl, OUITheme style)
         {
             List<Control> controls = ctrl.GetUIStyleControls("IStyleInterface");
             foreach (var control in controls)
             {
-                if (control is IStyleInterface item)
+                if (control is IThemeInterface item)
                 {
                     if (item is UIPage uipage && uipage.Parent is TabPage tabpage)
                     {
@@ -413,13 +413,13 @@ namespace OrcaUI.WinForms.Style
                         if (tabControl.SelectedTab == tabpage)
                         {
                             item.SetStyleColor(style.Colors());
-                            item.Theme = OUIThemes.Custom;
+                            item.Theme = OUITheme.Custom;
                         }
                     }
                     else
                     {
                         item.SetStyleColor(style.Colors());
-                        item.Theme = OUIThemes.Custom;
+                        item.Theme = OUITheme.Custom;
                     }
                 }
             }
@@ -433,7 +433,7 @@ namespace OrcaUI.WinForms.Style
                     if (item != null)
                     {
                         item.SetStyleColor(style.Colors());
-                        item.Style = OUIThemes.Custom;
+                        item.Style = OUITheme.Custom;
                     }
                 }
             }

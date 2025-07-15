@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using OrcaUI.WinForms.Style;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -9,7 +10,7 @@ namespace OrcaUI.WinForms.Theme
     {
         private static float dpiScale = -1;
 
-        public static float DPIScale => UIStyles.GlobalFont ? SystemDPIScale * 100.0f / UIStyles.GlobalFontScale : SystemDPIScale;
+        public static float DPIScale => OUIStyles.GlobalFont ? SystemDPIScale * 100.0f / UIStyles.GlobalFontScale : SystemDPIScale;
 
         public static float SystemDPIScale
         {
@@ -26,18 +27,18 @@ namespace OrcaUI.WinForms.Theme
             }
         }
 
-        public static bool NeedSetDPIFont() => UIStyles.DPIScale && (SystemDPIScale > 1 || UIStyles.GlobalFont);
+        public static bool NeedSetDPIFont() => OUIThemes.DPIScale && (SystemDPIScale > 1 || OUIThemes.GlobalFont);
 
 
         internal static Font DPIScaleFont(this Font font, float fontSize)
         {
             if (fontSize <= 0) return font;
-            if (UIStyles.DPIScale)
+            if (OUIThemes.DPIScale)
             {
-                if (UIStyles.GlobalFont)
+                if (OUIThemes.GlobalFont)
                 {
-                    byte gdiCharSet = UIStyles.GetGdiCharSet(UIStyles.GlobalFontName);
-                    return new Font(UIStyles.GlobalFontName, fontSize / DPIScale, font.Style, font.Unit, gdiCharSet);
+                    byte gdiCharSet = OUIThemes.GetGdiCharSet(OUIThemes.GlobalFontName);
+                    return new Font(OUIThemes.GlobalFontName, fontSize / DPIScale, font.Style, font.Unit, gdiCharSet);
                 }
                 else
                 {

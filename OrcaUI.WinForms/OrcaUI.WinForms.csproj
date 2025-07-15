@@ -58,9 +58,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Theme\OBuiltInResources.cs" />
     <Compile Include="Theme\OUIDPIScale.cs" />
-    <Compile Include="Theme\OUIMenuStyle.cs" />
+    <Compile Include="Theme\OUIMenuTheme.cs" />
     <Compile Include="Theme\OUIRandomColor.cs" />
-    <Compile Include="Theme\OUIStyle.cs" />
+    <Compile Include="Theme\OUITheme.cs" />
     <Compile Include="Theme\OUIStyleColor.cs" />
   </ItemGroup>
   <ItemGroup>
