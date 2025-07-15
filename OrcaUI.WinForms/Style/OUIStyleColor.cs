@@ -464,4 +464,260 @@ namespace OrcaUI.WinForms.Style
         }
     }
 
+    public class OUIOrangeStyle : OUIBaseStyle
+    {
+        public OUIOrangeStyle()
+        {
+            base.Init(OUIColor.Orange, OUIThemes.Orange, Color.White, OUIFontColor.Primary);
+        }
+    }
+
+    public class OUIGrayStyle : OUIBaseStyle
+    {
+        public OUIGrayStyle()
+        {
+            base.Init(OUIColor.Gray, OUIThemes.Gray, Color.White, OUIFontColor.Primary);
+        }
+    }
+
+    public class OUIDarkBlueStyle : OUIBaseStyle
+    {
+        public OUIDarkBlueStyle()
+        {
+            base.Init(OUIColor.Blue, OUIThemes.DarkBlue, Color.White, OUIFontColor.White);
+
+            PrimaryColor = OUIColor.DarkBlue;
+            RectColor = Color.FromArgb(18, 58, 92);
+            PlainColor = OUIColor.DarkBlue;
+            Color ForeColor = Color.White;
+
+            Color[] colors = Color.White.GradientColors(PrimaryColor, 16);
+            Color[] colors1 = PrimaryColor.GradientColors(Color.Black, 16);
+
+            FormTitleColor = colors1[2];
+            FormTitleForeColor = ForeColor;
+            FormForeColor = ForeColor;
+            FormRectColor = RectColor;
+            FormControlBoxFillHoverColor = colors[12];
+            FormControlBoxCloseFillHoverColor = OUIColor.Red;
+            FormBackColor = PrimaryColor;
+            FormControlBoxForeColor = ForeColor;
+
+            ButtonFillLightColor = UIStyles.Blue.PlainColor;
+            ButtonForeLightColor = UIStyles.Blue.PrimaryColor;
+
+            PageBackColor = PlainColor;
+            PageRectColor = PrimaryColor;
+            PageForeColor = ForeColor;
+            PageTitleFillColor = Color.FromArgb(76, 76, 76);
+            PageTitleForeColor = ForeColor;
+
+            AvatarFillColor = Color.Silver;
+            AvatarForeColor = PrimaryColor;
+
+            LabelForeColor = ForeColor;
+
+            LineForeColor = ForeColor;
+            LineFillColor = PlainColor;
+            LineRectColor = ForeColor;
+
+            CheckBoxForeColor = ForeColor;
+
+            ContextMenuColor = Color.FromArgb(18, 58, 92);
+            ContextMenuSelectedColor = Color.FromArgb(80, 160, 255);
+            ContextMenuForeColor = ForeColor;
+
+            PanelForeColor = ForeColor;
+            PanelRectColor = RectColor;
+            TabControlBackColor = PanelFillColor = PlainColor;
+            PanelFillColor2 = PlainColor;
+            PanelTitleColor = FormTitleColor;
+            PanelTitleForeColor = ForeColor;
+
+            TrackBarFillColor = PlainColor;
+            TrackBarForeColor = OUIColor.Blue;
+            TrackBarRectColor = OUIColor.Blue;
+            TrackDisableColor = Color.Silver;
+
+            BreadcrumbUnSelectedColor = Color.Silver;
+
+            ImageButtonForeColor = ForeColor;
+
+            BatteryFillColor = PrimaryColor;
+
+            DataGridViewFooterForeColor = ForeColor;
+
+            GridSelectedColor = colors[13];
+            GridSelectedForeColor = ForeColor;
+            GridStripeEvenColor = PlainColor;
+            GridStripeOddColor = PlainColor;
+            GridLineColor = RectColor;
+            GridTitleColor = Color.FromArgb(16, 45, 92);
+            GridTitleForeColor = ForeColor;
+            GridForeColor = ForeColor;
+            GridBarFillColor = PlainColor;
+            GridBarForeColor = ForeColor;
+
+            TreeViewSelectedColor = PrimaryColor;
+            TreeViewHoverColor = colors[13];
+            TreeViewBarFillColor = PlainColor;
+            TreeViewBarForeColor = ForeColor;
+            TreeViewForeColor = ForeColor;
+            TreeViewSelectedForeColor = ForeColor;
+            TreeViewBackColor = PlainColor;
+            TreeViewLineColor = ForeColor;
+
+            PaginationForeColor = ForeColor;
+
+            FlowLayoutPanelBarFillColor = PlainColor;
+            FlowLayoutPanelBarForeColor = ForeColor;
+
+            ListItemSelectBackColor = OUIColor.Blue;
+            ListItemSelectForeColor = ForeColor;
+            ListItemHoverColor = colors[13];
+            ListBarFillColor = PlainColor;
+            ListBarForeColor = ForeColor;
+            ListBackColor = PlainColor;
+            ListForeColor = ForeColor;
+
+            ScrollBarFillColor = PlainColor;
+            ScrollBarForeColor = ForeColor;
+
+            ScrollingTextFillColor = PlainColor;
+            ScrollingTextForeColor = ForeColor;
+
+            LogoForeColor = OUIFontColor.Primary;
+
+            DropDownControlColor = ForeColor;
+            DropDownPanelFillColor = OUIColor.LightBlue;
+            DropDownPanelForeColor = OUIFontColor.Primary;
+
+            RoundProcessForeColor2 = Color.White;
+
+            DropDownStyle = UIStyles.Blue;
+
+            SplitContainerArrowColor = OUIColor.Blue;
+        }
+    }
+
+    public class OUIBlackStyle : OUIBaseStyle
+    {
+        public UIBlackStyle()
+        {
+            base.Init(OUIColor.Blue, OUIThemes.Black, Color.White, OUIFontColor.Primary);
+
+            PrimaryColor = Color.FromArgb(24, 24, 24);
+            RectColor = Color.FromArgb(18, 58, 92);
+            PlainColor = Color.FromArgb(24, 24, 24);
+            Color ForeColor = Color.White;
+
+            Color[] colors = Color.White.GradientColors(PrimaryColor, 16);
+            Color[] colors1 = PrimaryColor.GradientColors(Color.Black, 16);
+
+            FormTitleColor = colors1[2];
+            FormTitleForeColor = ForeColor;
+            FormForeColor = ForeColor;
+            FormRectColor = RectColor;
+            FormControlBoxFillHoverColor = colors[12];
+            FormControlBoxCloseFillHoverColor = OUIColor.Red;
+            FormBackColor = PrimaryColor;
+            FormControlBoxForeColor = ForeColor;
+
+            ButtonFillLightColor = UIStyles.Blue.PlainColor;
+            ButtonForeLightColor = UIStyles.Blue.PrimaryColor;
+
+            PageBackColor = PlainColor;
+            PageRectColor = PrimaryColor;
+            PageForeColor = ForeColor;
+            PageTitleFillColor = Color.FromArgb(76, 76, 76);
+            PageTitleForeColor = ForeColor;
+
+            AvatarFillColor = Color.Silver;
+            AvatarForeColor = PrimaryColor;
+
+            LabelForeColor = ForeColor;
+
+            LineForeColor = ForeColor;
+            LineFillColor = PlainColor;
+            LineRectColor = ForeColor;
+
+            CheckBoxForeColor = ForeColor;
+
+            ContextMenuColor = Color.FromArgb(18, 58, 92);
+            ContextMenuSelectedColor = Color.FromArgb(80, 160, 255);
+            ContextMenuForeColor = ForeColor;
+
+            PanelForeColor = ForeColor;
+            PanelRectColor = RectColor;
+            TabControlBackColor = PanelFillColor = PlainColor;
+            PanelFillColor2 = PlainColor;
+            PanelTitleColor = FormTitleColor;
+            PanelTitleForeColor = ForeColor;
+
+            TrackBarFillColor = PlainColor;
+            TrackBarForeColor = OUIColor.Blue;
+            TrackBarRectColor = OUIColor.Blue;
+            TrackDisableColor = Color.Silver;
+
+            BreadcrumbUnSelectedColor = Color.Silver;
+
+            ImageButtonForeColor = ForeColor;
+
+            BatteryFillColor = PrimaryColor;
+
+            DataGridViewFooterForeColor = ForeColor;
+
+            GridSelectedColor = colors[13];
+            GridSelectedForeColor = ForeColor;
+            GridStripeEvenColor = PlainColor;
+            GridStripeOddColor = PlainColor;
+            GridLineColor = RectColor;
+            GridTitleColor = Color.FromArgb(16, 45, 92);
+            GridTitleForeColor = ForeColor;
+            GridForeColor = ForeColor;
+            GridBarFillColor = PlainColor;
+            GridBarForeColor = ForeColor;
+
+            TreeViewSelectedColor = PrimaryColor;
+            TreeViewHoverColor = colors[13];
+            TreeViewBarFillColor = PlainColor;
+            TreeViewBarForeColor = ForeColor;
+            TreeViewForeColor = ForeColor;
+            TreeViewSelectedForeColor = ForeColor;
+            TreeViewBackColor = PlainColor;
+            TreeViewLineColor = ForeColor;
+
+            PaginationForeColor = ForeColor;
+
+            FlowLayoutPanelBarFillColor = PlainColor;
+            FlowLayoutPanelBarForeColor = ForeColor;
+
+            ListItemSelectBackColor = OUIColor.Blue;
+            ListItemSelectForeColor = ForeColor;
+            ListItemHoverColor = colors[13];
+            ListBarFillColor = PlainColor;
+            ListBarForeColor = ForeColor;
+            ListBackColor = PlainColor;
+            ListForeColor = ForeColor;
+
+            ScrollBarFillColor = PlainColor;
+            ScrollBarForeColor = ForeColor;
+
+            ScrollingTextFillColor = PlainColor;
+            ScrollingTextForeColor = ForeColor;
+
+            LogoForeColor = OUIFontColor.Primary;
+
+            DropDownControlColor = ForeColor;
+            DropDownPanelFillColor = OUIColor.LightBlue;
+            DropDownPanelForeColor = OUIFontColor.Primary;
+
+            RoundProcessForeColor2 = Color.White;
+
+            DropDownStyle = UIStyles.Blue;
+
+            SplitContainerArrowColor = OUIColor.Blue;
+        }
+    }
+
 }
