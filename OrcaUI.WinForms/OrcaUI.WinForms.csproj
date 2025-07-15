@@ -67,6 +67,7 @@
     <Content Include="OUILWinForms.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Animation\" />
     <Folder Include="Charts\" />
     <Folder Include="Common\" />
     <Folder Include="Controls\Buttons\" />
