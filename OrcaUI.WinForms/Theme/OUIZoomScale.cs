@@ -62,12 +62,12 @@ namespace OrcaUI.WinForms.Theme
                         }
                     }
 
-                    return new Rectangle(XInterval, YInterval, Width, Height);
+                    return new System.Drawing.Rectangle(XInterval, YInterval, Width, Height);
                 }
             }
             else
             {
-                return new Rectangle(control.Left, control.Top, control.Width, control.Height);
+                return new System.Drawing.Rectangle(control.Left, control.Top, control.Width, control.Height);
             }
         }
 
@@ -76,9 +76,9 @@ namespace OrcaUI.WinForms.Theme
             return (int)(size * scale + 0.5);
         }
 
-        public static Size Calc(Size size, float scale)
+        public static System.Drawing.Size Calc(System.Drawing.Size size, float scale)
         {
-            return new Size(Calc(size.Width, scale), Calc(size.Height, scale));
+            return new System.Drawing.Size(Calc(size.Width, scale), Calc(size.Height, scale));
         }
 
         /// <summary>
