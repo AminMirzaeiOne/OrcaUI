@@ -448,4 +448,12 @@ namespace OrcaUI.WinForms.Style
         }
     }
 
+    public class OUIGreenStyle : OUIBaseStyle
+    {
+        public OUIGreenStyle()
+        {
+            base.Init(OUIColor.Green, OUIThemes.Green, Color.White, OUIFontColor.Primary);
+        }
+    }
+
 }
