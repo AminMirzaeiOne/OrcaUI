@@ -64,6 +64,7 @@
     <Compile Include="Theme\OUITheme.cs" />
     <Compile Include="Theme\OUIPalette.cs" />
     <Compile Include="Theme\OUIThemes.cs" />
+    <Compile Include="Theme\OUIZoomScale.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="OUILWinForms.ico" />
