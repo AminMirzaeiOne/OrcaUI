@@ -413,4 +413,17 @@ namespace OrcaUI.WinForms.Style
         }
     }
 
+    public class OUIColorfulStyle : OUIBaseStyle
+    {
+        public OUIColorfulStyle()
+        {
+            base.Init(Color.FromArgb(0, 190, 172), OUIThemes.Colorful, Color.White, OUIFontColor.Primary);
+        }
+
+        public void Init(Color styleColor, Color foreColor)
+        {
+            Init(styleColor, OUIThemes.Colorful, foreColor, OUIFontColor.Primary);
+        }
+    }
+
 }
