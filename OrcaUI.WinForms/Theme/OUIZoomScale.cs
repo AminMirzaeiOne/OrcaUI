@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using OrcaUI;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OrcaUI.WinForms.Theme
 {
@@ -28,7 +25,7 @@ namespace OrcaUI.WinForms.Theme
 
     public static class OUIZoomScale
     {
-        public static Rectangle Create(Control control)
+        public static Rectangle Create(System.Windows.Forms.Control control)
         {
             if (control is IZoomScale ctrl)
             {
@@ -101,7 +98,7 @@ namespace OrcaUI.WinForms.Theme
                 }
 
                 // Set the zoom parameters for the control
-                ctrl.ZoomScaleRect = UIZoomScale.Create(control);
+                ctrl.ZoomScaleRect = OUIZoomScale.Create(control);
 
                 // Apply custom zoom scaling, e.g., UIAvatar
                 ctrl.SetZoomScale(scale);
@@ -133,7 +130,7 @@ namespace OrcaUI.WinForms.Theme
 
                             if ((control.Anchor & AnchorStyles.Top) == AnchorStyles.Top)
                             {
-                                if (control.Parent is UIForm form && form.ShowTitle)
+                                if (control.Parent is OCForm form && form.ShowTitle)
                                     control.Top = Calc(rect.Top - form.TitleHeight, scale) + form.TitleHeight;
                                 else
                                     control.Top = Calc(rect.Top, scale);
