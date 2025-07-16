@@ -118,6 +118,15 @@ namespace OrcaUI.Animation
             timer.Start();
         }
 
+        private void Start()
+        {
+            //main working thread
+            thread = new Thread(Work);
+            thread.IsBackground = true;
+            thread.Name = "Animator thread";
+            thread.Start();
+        }
+
 
     }
 }
