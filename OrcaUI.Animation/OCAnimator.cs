@@ -102,6 +102,22 @@ namespace OrcaUI.Animation
             set { animationType = value; InitDefaultAnimation(animationType); }
         }
 
+        protected virtual void Init()
+        {
+            AnimationType = WFAnimations.AnimationType.VertSlide;
+            DefaultAnimation = new Animation();
+            MaxAnimationTime = 1500;
+            TimeStep = 0.02f;
+            Interval = 10;
+
+            Disposed += new EventHandler(Animator_Disposed);
+
+            timer = new System.Windows.Forms.Timer();
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Interval = 1;
+            timer.Start();
+        }
+
 
     }
 }
