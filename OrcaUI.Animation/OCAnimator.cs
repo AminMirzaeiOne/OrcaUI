@@ -717,5 +717,12 @@ namespace OrcaUI.Animation
         Custom
     }
 
+    public class AnimationCompletedEventArg : EventArgs
+    {
+        public Animation Animation { get; set; }
+        public Control Control { get; internal set; }
+        public AnimateMode Mode { get; internal set; }
+    }
+
 
 }
