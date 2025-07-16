@@ -25,6 +25,35 @@ namespace OrcaUI.Animation
         int counter;
         List<QueueItem> requests = new List<QueueItem>();
 
+        /// <summary>
+        /// Occurs when animation of the control is completed
+        /// </summary>
+        public event EventHandler<AnimationCompletedEventArg> AnimationCompleted;
+
+        /// <summary>
+        /// Ocuurs when all animations are completed
+        /// </summary>
+        public event EventHandler AllAnimationsCompleted;
+
+        /// <summary>
+        /// Occurs when needed transform matrix
+        /// </summary>
+        public event EventHandler<TransfromNeededEventArg> TransfromNeeded;
+
+        /// <summary>
+        /// Occurs when needed non-linear transformation
+        /// </summary>
+        public event EventHandler<NonLinearTransfromNeededEventArg> NonLinearTransfromNeeded;
+
+        /// <summary>
+        /// Occurs when user click on the animated control
+        /// </summary>
+        public event EventHandler<MouseEventArgs> MouseDown;
+
+        /// <summary>
+        /// Occurs when frame of animation is painting
+        /// </summary>
+        public event EventHandler<PaintEventArgs> FramePainted;
 
     }
 }
