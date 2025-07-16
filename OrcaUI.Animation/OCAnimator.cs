@@ -55,5 +55,53 @@ namespace OrcaUI.Animation
         /// </summary>
         public event EventHandler<PaintEventArgs> FramePainted;
 
+        /// <summary>
+        /// Max time of animation (ms)
+        /// </summary>
+        [DefaultValue(1500)]
+        public int MaxAnimationTime { get; set; }
+
+        /// <summary>
+        /// Default animation
+        /// </summary>
+        [TypeConverter(typeof(ExpandableObjectConverter))]
+        public Animation DefaultAnimation { get; set; }
+
+        /// <summary>
+        /// Cursor of animated control
+        /// </summary>
+        [DefaultValue(typeof(Cursor), "Default")]
+        public Cursor Cursor { get; set; }
+
+        /// <summary>
+        /// Are all animations completed?
+        /// </summary>
+        public bool IsCompleted
+        {
+            get { lock (queue) return queue.Count == 0; }
+        }
+
+        /// <summary>
+        /// Interval between frames (ms)
+        /// </summary>
+        [DefaultValue(10)]
+        public int Interval
+        {
+            get;
+            set;
+        }
+
+        public bool Upside { get; set; } = false;
+
+        /// <summary>
+        /// Type of built-in animation
+        /// </summary>
+        public AnimationType AnimationType
+        {
+            get { return animationType; }
+            set { animationType = value; InitDefaultAnimation(animationType); }
+        }
+
+
     }
 }
