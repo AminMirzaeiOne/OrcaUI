@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace OrcaUI.Animation
 {
@@ -42,6 +40,20 @@ namespace OrcaUI.Animation
         public float MaxTime { get; set; }
         public Padding Padding { get; set; }
         public bool AnimateOnlyDifferences { get; set; }
+
+        public bool IsNonLinearTransformNeeded
+        {
+            get
+            {
+                if (this.BlindCoeff == PointF.Empty)
+                    if (this.MosaicCoeff == PointF.Empty || this.MosaicSize == 0)
+                        if (this.TransparencyCoeff == 0f)
+                            if (this.LeafCoeff == 0f)
+                                return false;
+
+                return true;
+            }
+        }
 
     }
 }
