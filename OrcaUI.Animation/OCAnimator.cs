@@ -708,10 +708,14 @@ namespace OrcaUI.Animation
 
         #endregion
 
-
-
-
-
-
     }
+
+    public enum DecorationType
+    {
+        None,
+        BottomMirror,
+        Custom
+    }
+
+
 }
