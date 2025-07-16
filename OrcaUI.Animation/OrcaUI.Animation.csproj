@@ -48,6 +48,7 @@
     <Compile Include="DecorationControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="DoubleBitmapControl.cs" />
     <Compile Include="OCAnimator.cs">
       <SubType>Component</SubType>
     </Compile>
