@@ -759,5 +759,13 @@ namespace OrcaUI.Animation
         public bool UseDefaultTransform { get; set; }
     }
 
+    public enum AnimateMode
+    {
+        Show,
+        Hide,
+        Update,
+        BeginUpdate
+    }
+
 
 }
