@@ -77,4 +77,24 @@ namespace OrcaUI.Animation
         public static Animation HorizBlind { get { return new Animation { BlindCoeff = new PointF(1f, 0f) }; } }
 
     }
+
+    public enum AnimationType
+    {
+        Custom = 0,
+        Rotate,
+        HorizSlide,
+        VertSlide,
+        Scale,
+        ScaleAndRotate,
+        HorizSlideAndRotate,
+        ScaleAndHorizSlide,
+        Transparent,
+        Leaf,
+        Mosaic,
+        Particles,
+        VertBlind,
+        HorizBlind
+    }
+
+
 }
