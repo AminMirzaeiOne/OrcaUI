@@ -55,5 +55,12 @@ namespace OrcaUI.Animation
             }
         }
 
+        public Animation()
+        {
+            this.MinTime = 0f;
+            this.MaxTime = 1f;
+            this.AnimateOnlyDifferences = true;
+        }
+
     }
 }
