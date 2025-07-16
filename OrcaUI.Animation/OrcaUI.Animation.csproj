@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="Animation.cs" />
     <Compile Include="Controller.cs" />
+    <Compile Include="DecorationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="OCAnimator.cs">
       <SubType>Component</SubType>
     </Compile>
